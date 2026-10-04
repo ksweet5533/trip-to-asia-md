@@ -1,32 +1,52 @@
 "use client";
 
 import { Photo, photoFor } from "@/components/Photo";
-import { fmtDateString, fmtTime, tzAbbrev } from "@/lib/time";
+import { fmtDate, fmtDateString, fmtTime, partsInTz } from "@/lib/time";
 import { mapsUrl, stopsWithTimes, type StopWithTimes } from "@/lib/trip";
+import { daysBetween } from "@/lib/time";
 
-export function Timeline({ now, viewerTz, currentId }: { now: number; viewerTz: string; currentId: string | null }) {
+type CardState = "past" | "current" | "next" | "future";
+
+export function Timeline({ now, viewerTz, viewerLabel, currentId }: { now: number; viewerTz: string; viewerLabel: string; currentId: string | null }) {
+  const currentIndex = stopsWithTimes.findIndex((s) => s.id === currentId);
+  const nextIndex = currentIndex >= 0 ? currentIndex + 1 : stopsWithTimes.findIndex((s) => s.arrivalMs > now);
   return (
     <ol className="space-y-4">
-      {stopsWithTimes.map((s) => (
-        <StopCard key={s.id} stop={s} viewerTz={viewerTz} state={s.id === currentId ? "current" : s.arrivalMs <= now ? "past" : "future"} />
-      ))}
+      {stopsWithTimes.map((s, i) => {
+        const state: CardState = s.id === currentId ? "current" : i === nextIndex ? "next" : s.arrivalMs <= now ? "past" : "future";
+        return <StopCard key={s.id} stop={s} now={now} viewerTz={viewerTz} viewerLabel={viewerLabel} state={state} />;
+      })}
     </ol>
   );
 }
 
-function StopCard({ stop, viewerTz, state }: { stop: StopWithTimes; viewerTz: string; state: "past" | "current" | "future" }) {
+function Badge({ tone, children }: { tone: "amber" | "dark" | "sky"; children: React.ReactNode }) {
+  const cls = tone === "amber" ? "bg-amber-500 text-white" : tone === "sky" ? "bg-sky-600 text-white" : "bg-black/60 text-white";
+  return <span className={`absolute left-3 top-3 rounded-full px-2.5 py-0.5 text-xs font-semibold shadow ${cls}`}>{children}</span>;
+}
+
+function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithTimes; now: number; viewerTz: string; viewerLabel: string; state: CardState }) {
   const entry = photoFor(stop.wiki);
-  const isHome = stop.id === "home";
-  const ring = state === "current" ? "ring-2 ring-amber-500" : "ring-1 ring-stone-200 dark:ring-stone-800";
+  const photo = photoFor(stop.photoWiki ?? stop.wiki);
+  const ring = state === "current" ? "ring-2 ring-amber-500" : state === "next" ? "ring-2 ring-sky-400" : "ring-1 ring-stone-200 dark:ring-stone-800";
+  const daysAway = daysBetween(partsInTz(now, stop.tz).date, stop.arrive);
+  const arrived = stop.arrivalMs <= now;
   return (
     <li id={`stop-${stop.id}`} className={`scroll-mt-4 overflow-hidden rounded-2xl bg-white dark:bg-stone-950 ${ring} ${state === "past" ? "opacity-80" : ""}`}>
       <div className="grid md:grid-cols-[220px_1fr]">
-        <div className="relative h-40 md:h-full">
-          <Photo wiki={stop.photoWiki ?? stop.wiki} alt={stop.place} className="absolute inset-0 h-full w-full object-cover" />
-          {state === "current" && (
-            <span className="absolute left-3 top-3 rounded-full bg-amber-500 px-2.5 py-0.5 text-xs font-semibold text-white shadow">They are here</span>
+        <div className="relative md:self-start md:sticky md:top-4">
+          <div className="relative h-44 md:h-64">
+            <Photo wiki={stop.photoWiki ?? stop.wiki} alt={stop.place} className="absolute inset-0 h-full w-full object-cover" credit />
+            {state === "current" && <Badge tone="amber">They are here</Badge>}
+            {state === "next" && <Badge tone="sky">Up next{daysAway > 0 ? ` · in ${daysAway} day${daysAway === 1 ? "" : "s"}` : " · today"}</Badge>}
+            {state === "past" && <Badge tone="dark">Done</Badge>}
+          </div>
+          {photo?.description && (
+            <p className="hidden px-3 py-2 text-xs text-stone-500 md:block">
+              {stop.photoWiki ? `${stop.photoWiki}, nearby. ` : ""}
+              {photo.description.charAt(0).toUpperCase() + photo.description.slice(1)}
+            </p>
           )}
-          {state === "past" && <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-0.5 text-xs font-medium text-white">Done</span>}
         </div>
         <div className="p-4 sm:p-5">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -40,8 +60,8 @@ function StopCard({ stop, viewerTz, state }: { stop: StopWithTimes; viewerTz: st
           </div>
           <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">{stop.blurb}</p>
           <p className="mt-2 text-xs text-stone-500">
-            Arrives {fmtTime(stop.arrivalMs, stop.tz)} {tzAbbrev(stop.arrivalMs, stop.tz)} local, which is {fmtDateString(new Date(stop.arrivalMs + 0).toISOString().slice(0, 10))}{" "}
-            {fmtTime(stop.arrivalMs, viewerTz)} for you{isHome ? "" : ""}.
+            {arrived ? "Arrived" : "Arrives"} {fmtDate(stop.arrivalMs, stop.tz)} at {fmtTime(stop.arrivalMs, stop.tz)} local time, which is {fmtDate(stop.arrivalMs, viewerTz)} at{" "}
+            {fmtTime(stop.arrivalMs, viewerTz)} {viewerLabel}.
           </p>
 
           <div className="mt-3 flex flex-wrap gap-2 text-xs">
@@ -61,12 +81,12 @@ function StopCard({ stop, viewerTz, state }: { stop: StopWithTimes; viewerTz: st
               rel="noreferrer"
               className="rounded-full bg-stone-100 px-3 py-1 font-medium text-stone-700 ring-1 ring-stone-200 hover:bg-stone-200 dark:bg-stone-900 dark:text-stone-200 dark:ring-stone-700"
             >
-              Map
+              Open in Google Maps
             </a>
           </div>
 
           {stop.plans.length > 0 && (
-            <details className="group mt-3" open={state === "current"}>
+            <details className="group mt-3" open={state === "current" || state === "next"}>
               <summary className="cursor-pointer select-none text-sm font-semibold text-stone-800 dark:text-stone-200">
                 Day by day <span className="font-normal text-stone-500">({stop.plans.length})</span>
               </summary>
@@ -74,7 +94,14 @@ function StopCard({ stop, viewerTz, state }: { stop: StopWithTimes; viewerTz: st
                 {stop.plans.map((d) => (
                   <li key={d.date} className="grid grid-cols-[88px_1fr] gap-2 text-sm">
                     <span className="font-medium text-stone-700 dark:text-stone-300">{fmtDateString(d.date)}</span>
-                    <span className="text-stone-600 dark:text-stone-400">{d.items.join(" · ")}</span>
+                    <ul className="space-y-1">
+                      {d.items.map((item) => (
+                        <li key={item} className="flex gap-2 text-stone-600 dark:text-stone-400">
+                          <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </li>
                 ))}
               </ul>
@@ -82,30 +109,39 @@ function StopCard({ stop, viewerTz, state }: { stop: StopWithTimes; viewerTz: st
           )}
 
           {(stop.booked?.length || stop.ideas?.length) ? (
-            <details className="mt-2" open={state === "current"}>
+            <details className="mt-2" open={state === "current" || state === "next"}>
               <summary className="cursor-pointer select-none text-sm font-semibold text-stone-800 dark:text-stone-200">
-                Booked and could-do
+                Booked and could-do{" "}
+                <span className="font-normal text-stone-500">
+                  ({[stop.booked?.length ? `${stop.booked.length} booked` : null, stop.ideas?.length ? `${stop.ideas.length} ideas` : null].filter(Boolean).join(", ")})
+                </span>
               </summary>
-              <div className="mt-2 grid gap-3 sm:grid-cols-2">
+              <div className="mt-2 grid gap-4 sm:grid-cols-2">
                 {stop.booked?.length ? (
-                  <ul className="space-y-1">
-                    {stop.booked.map((b) => (
-                      <li key={b} className="flex gap-2 text-sm text-stone-700 dark:text-stone-300">
-                        <span className="text-emerald-600">✓</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h4 className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">Booked</h4>
+                    <ul className="mt-1.5 space-y-1">
+                      {stop.booked.map((b) => (
+                        <li key={b} className="flex gap-2 text-sm text-stone-700 dark:text-stone-300">
+                          <span className="text-emerald-600">✓</span>
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : null}
                 {stop.ideas?.length ? (
-                  <ul className="space-y-1">
-                    {stop.ideas.map((b) => (
-                      <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
-                        <span className="text-stone-400">○</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h4 className="text-xs font-semibold uppercase tracking-wide text-stone-500">Could do</h4>
+                    <ul className="mt-1.5 space-y-1">
+                      {stop.ideas.map((b) => (
+                        <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
+                          <span className="text-stone-400">○</span>
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : null}
               </div>
             </details>

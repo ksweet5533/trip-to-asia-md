@@ -137,7 +137,7 @@ export default function TripTracker() {
 
           <section className="mt-10">
             <SectionTitle kicker="Stop by stop" title="Itinerary" />
-            <Timeline now={now} viewerTz={viewerTz} currentId={status.kind === "at" || status.kind === "after" ? status.stop.id : status.kind === "flying" ? status.to.id : null} />
+            <Timeline now={now} viewerTz={viewerTz} viewerLabel={zoneOptions.find((z) => z.tz === viewerTz)?.label.replace(/ \(.*\)$/, "") ?? viewerTz} currentId={status.kind === "at" || status.kind === "after" ? status.stop.id : status.kind === "flying" ? status.to.id : null} />
           </section>
 
           <footer className="mt-12 text-xs leading-relaxed text-stone-500 dark:text-stone-500">
