@@ -12,6 +12,11 @@ through Vietnam, Thailand, Bhutan, Indonesia, Australia and New Zealand.
 - **Map** of the whole route with the part travelled so far highlighted.
 - **Stop by stop** itinerary with a photo, hotel link and day-by-day plan.
 
+## Publishing
+
+`npm run deploy` builds the site and pushes it to the `gh-pages` branch, which
+GitHub Pages serves at https://ksweet5533.github.io/trip-to-asia-md/.
+
 ## Running
 
 ```bash
