@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
-import { TRAVELERS } from "@/data/itinerary";
+import { TRAVELERS, isBooked, itemText } from "@/data/itinerary";
 import { flightTrackerUrl, flightradarUrl } from "@/data/flights";
 import { describeOffset, fmtDate, fmtDateString, fmtTime, tzAbbrev } from "@/lib/time";
 import { getStatus, mapsUrl, planFor, progressAt, stopsWithTimes, TOTAL_DAYS, tripDayNumber, type StopWithTimes, type TripStatus } from "@/lib/trip";
@@ -241,9 +241,13 @@ function NowPanel({ now, status, viewerTz }: { now: number; status: TripStatus; 
               {plan.length ? (
                 <ul className="mt-2 space-y-1.5">
                   {plan.map((item) => (
-                    <li key={item} className="flex gap-2 text-sm text-stone-700 dark:text-stone-300">
-                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
-                      <span>{item}</span>
+                    <li key={itemText(item)} className="flex gap-2 text-sm text-stone-700 dark:text-stone-300">
+                      {isBooked(item) ? (
+                        <span className="w-3 shrink-0 text-center text-emerald-600" title="Booked">✓</span>
+                      ) : (
+                        <span className="mt-[7px] h-1.5 w-1.5 shrink-0 self-start rounded-full bg-amber-500" />
+                      )}
+                      <span>{itemText(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -253,41 +257,24 @@ function NowPanel({ now, status, viewerTz }: { now: number; status: TripStatus; 
             </div>
           )}
 
-          {stop && (stop.booked?.length || stop.ideas?.length) ? (
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {stop.booked?.length ? (
-                <div>
-                  <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">Booked here</h3>
-                  <ul className="mt-2 space-y-1.5">
-                    {stop.booked.map((b) => (
-                      <li key={b} className="flex gap-2 text-sm text-stone-700 dark:text-stone-300">
-                        <span className="mt-0.5 text-emerald-600">✓</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-              {stop.ideas?.length ? (
-                <div>
-                  <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">Could do</h3>
-                  <ul className="mt-2 space-y-1.5">
-                    {stop.ideas.slice(0, 6).map((b) => (
-                      <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
-                        <span className="mt-0.5 text-stone-400">○</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                    {stop.ideas.length > 6 && (
-                      <li className="text-sm">
-                        <a href={`#stop-${stop.id}`} className="text-amber-700 underline underline-offset-2 dark:text-amber-400">
-                          {stop.ideas.length - 6} more below
-                        </a>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              ) : null}
+          {stop?.ideas?.length ? (
+            <div className="mt-5">
+              <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">Could do in {stop.place}</h3>
+              <ul className="mt-2 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+                {stop.ideas.slice(0, 6).map((b) => (
+                  <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
+                    <span className="mt-0.5 text-stone-400">○</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+                {stop.ideas.length > 6 && (
+                  <li className="text-sm">
+                    <a href={`#stop-${stop.id}`} className="text-amber-700 underline underline-offset-2 dark:text-amber-400">
+                      {stop.ideas.length - 6} more below
+                    </a>
+                  </li>
+                )}
+              </ul>
             </div>
           ) : null}
         </div>

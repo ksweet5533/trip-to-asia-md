@@ -1,6 +1,7 @@
 "use client";
 
 import { Photo, photoFor } from "@/components/Photo";
+import { isBooked, itemText } from "@/data/itinerary";
 import { fmtDate, fmtDateString, fmtTime, partsInTz } from "@/lib/time";
 import { mapsUrl, stopsWithTimes, type StopWithTimes } from "@/lib/trip";
 import { daysBetween } from "@/lib/time";
@@ -31,6 +32,7 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
   const ring = state === "current" ? "ring-2 ring-amber-500" : state === "next" ? "ring-2 ring-sky-400" : "ring-1 ring-stone-200 dark:ring-stone-800";
   const daysAway = daysBetween(partsInTz(now, stop.tz).date, stop.arrive);
   const arrived = stop.arrivalMs <= now;
+  const bookedCount = stop.plans.reduce((n, d) => n + d.items.filter(isBooked).length, 0);
   return (
     <li id={`stop-${stop.id}`} className={`scroll-mt-4 overflow-hidden rounded-2xl bg-white dark:bg-stone-950 ${ring} ${state === "past" ? "opacity-80" : ""}`}>
       <div className="grid md:grid-cols-[220px_1fr]">
@@ -88,7 +90,11 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
           {stop.plans.length > 0 && (
             <details className="group mt-3" open={state === "current" || state === "next"}>
               <summary className="cursor-pointer select-none text-sm font-semibold text-stone-800 dark:text-stone-200">
-                Day by day <span className="font-normal text-stone-500">({stop.plans.length})</span>
+                Day by day{" "}
+                <span className="font-normal text-stone-500">
+                  ({stop.plans.length} day{stop.plans.length === 1 ? "" : "s"}
+                  {bookedCount ? `, ${bookedCount} booked ✓` : ""})
+                </span>
               </summary>
               <ul className="mt-2 space-y-2">
                 {stop.plans.map((d) => (
@@ -96,9 +102,13 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
                     <span className="font-medium text-stone-700 dark:text-stone-300">{fmtDateString(d.date)}</span>
                     <ul className="space-y-1">
                       {d.items.map((item) => (
-                        <li key={item} className="flex gap-2 text-stone-600 dark:text-stone-400">
-                          <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
-                          <span>{item}</span>
+                        <li key={itemText(item)} className="flex gap-2 text-stone-600 dark:text-stone-400">
+                          {isBooked(item) ? (
+                            <span className="w-3 shrink-0 text-center text-emerald-600" title="Booked">✓</span>
+                          ) : (
+                            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 self-start rounded-full bg-amber-500" />
+                          )}
+                          <span className={isBooked(item) ? "text-stone-700 dark:text-stone-300" : ""}>{itemText(item)}</span>
                         </li>
                       ))}
                     </ul>
@@ -108,42 +118,19 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
             </details>
           )}
 
-          {(stop.booked?.length || stop.ideas?.length) ? (
+          {stop.ideas?.length ? (
             <details className="mt-2" open={state === "current" || state === "next"}>
               <summary className="cursor-pointer select-none text-sm font-semibold text-stone-800 dark:text-stone-200">
-                Booked and could-do{" "}
-                <span className="font-normal text-stone-500">
-                  ({[stop.booked?.length ? `${stop.booked.length} booked` : null, stop.ideas?.length ? `${stop.ideas.length} ideas` : null].filter(Boolean).join(", ")})
-                </span>
+                Could do <span className="font-normal text-stone-500">({stop.ideas.length} ideas)</span>
               </summary>
-              <div className="mt-2 grid gap-4 sm:grid-cols-2">
-                {stop.booked?.length ? (
-                  <div>
-                    <h4 className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">Booked</h4>
-                    <ul className="mt-1.5 space-y-1">
-                      {stop.booked.map((b) => (
-                        <li key={b} className="flex gap-2 text-sm text-stone-700 dark:text-stone-300">
-                          <span className="text-emerald-600">✓</span>
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-                {stop.ideas?.length ? (
-                  <div>
-                    <h4 className="text-xs font-semibold uppercase tracking-wide text-stone-500">Could do</h4>
-                    <ul className="mt-1.5 space-y-1">
-                      {stop.ideas.map((b) => (
-                        <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
-                          <span className="text-stone-400">○</span>
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
+              <ul className="mt-2 grid gap-x-6 gap-y-1 sm:grid-cols-2">
+                {stop.ideas.map((b) => (
+                  <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
+                    <span className="text-stone-400">○</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </details>
           ) : null}
         </div>

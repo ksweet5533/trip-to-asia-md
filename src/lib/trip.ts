@@ -1,4 +1,4 @@
-import { days, stops, TRIP_START, TRIP_END, type DayPlan, type Stop } from "@/data/itinerary";
+import { days, stops, TRIP_START, TRIP_END, type DayPlan, type PlanItem, type Stop } from "@/data/itinerary";
 import { flights, type Flight } from "@/data/flights";
 import { daysBetween, haversineKm, partsInTz, zonedToUtc } from "@/lib/time";
 
@@ -72,7 +72,7 @@ export function getStatus(now: number): TripStatus {
   return { kind: "at", stop: current, next, tz: current.tz, today, travelDay: today === current.arrive };
 }
 
-export function planFor(date: string): string[] {
+export function planFor(date: string): PlanItem[] {
   return days.find((d) => d.date === date)?.items ?? [];
 }
 
