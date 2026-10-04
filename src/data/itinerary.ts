@@ -582,7 +582,7 @@ export const days: DayPlan[] = [
   { date: "2026-09-28", items: ["Fly to SFO, 9:27 AM"] },
   { date: "2026-10-04", items: ["Leave SFO 10:50 PM, Vietnam Airlines VN99", b("Apply for the Vietnam digital arrival form")] },
   { date: "2026-10-05", items: ["In the air over the Pacific, crossing the date line"] },
-  { date: "2026-10-06", items: ["Arrive Ho Chi Minh City 4:30 AM", "Check in: Grand Hotel Du Lac Boutique Saigon", b("Take out 5 million VND (about $200) at a VP Bank ATM")] },
+  { date: "2026-10-06", items: ["Arrive Ho Chi Minh City 4:30 AM", "Check in: Grand Hotel Du Lac Boutique Saigon"] },
   { date: "2026-10-07", items: ["Ho Chi Minh City"] },
   { date: "2026-10-08", items: [b("Fly to Hanoi 10:00 AM to 12:10 PM, Vietnam Airlines VN210 from Tan Son Nhat"), "Check in: May de Ville Lakeside"] },
   { date: "2026-10-09", items: ["Hanoi", b("Dinner at Tầm Vị, 6 PM (Michelin star)")] },
