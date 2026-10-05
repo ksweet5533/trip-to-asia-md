@@ -82,7 +82,7 @@ export const stops: Stop[] = [
       "Xôi Gà Number One sticky rice, 3 min from the hotel",
       "Bánh mì: Phuc Hai Quan (crispy pork belly), Huynh Hoa (huge), Bánh Mì Xanh (veggie)",
       "Hoa Tuc (Michelin, 14 min walk)",
-      ],
+    ],
   },
   {
     id: "hanoi-1",
@@ -105,7 +105,8 @@ export const stops: Stop[] = [
       "Tran Quoc Pagoda on West Lake",
       "Thang Long Water Puppet Theatre",
       "Dong Xuan night market (Fri to Sun, around 8 PM)",
-      "Ta Hien beer street"],
+      "Ta Hien beer street",
+    ],
   },
   {
     id: "cruise",
@@ -138,7 +139,7 @@ export const stops: Stop[] = [
       "Hang Mua viewpoint climb, early morning (take the left path if tired)",
       "Bai Dinh Pagoda by e-bike or Grab",
       "Hoa Lu old town walking street by the lake, lots of places to eat",
-      ],
+    ],
   },
   {
     id: "puluong",
@@ -159,7 +160,8 @@ export const stops: Stop[] = [
       "The giant wooden water wheels at Chieng Lau",
       "Bat Cave (Hang Doi)",
       "Swim at Hieu Waterfall",
-      "Pho Doan market (Thursdays and Sundays)"],
+      "Pho Doan market (Thursdays and Sundays)",
+    ],
   },
   {
     id: "hanoi-2",
@@ -208,7 +210,8 @@ export const stops: Stop[] = [
       "Tango Monastery hike, 2.5 h round trip",
       "Buddha Dordenma, Memorial Chorten",
       "Centenary Farmers' Market (Fri to Sun)",
-      "Thimphu cafés and handicraft shops"],
+      "Thimphu cafés and handicraft shops",
+    ],
   },
   {
     id: "punakha",
@@ -229,7 +232,8 @@ export const stops: Stop[] = [
       "Punakha Dzong and the suspension bridge",
       "Khamsum Yulley Namgyal Chorten hike, 1.5 h",
       "Sangchhen Dorji Lhuendrup nunnery",
-      "Village walk with local families"],
+      "Village walk with local families",
+    ],
   },
   {
     id: "bumthang",
@@ -248,7 +252,8 @@ export const stops: Stop[] = [
       "On the way: Pelela Pass, Chendebji Chorten, Trongsa Dzong and museum, Yathra weaving in Chumey",
       "Jakar Dzong and Bumthang town",
       "Kurjey Lhakhang",
-      "Jambay Lhakhang Drup festival (schedule permitting)"],
+      "Jambay Lhakhang Drup festival (schedule permitting)",
+    ],
   },
   {
     id: "phobjikha",
@@ -282,7 +287,8 @@ export const stops: Stop[] = [
       "Rinchengang village, National Museum (Ta Dzong), Rinpung Dzong",
       "Zuri Dzong hike for valley views",
       "Tiger's Nest: 5 to 6 h round trip, stop at the cafeteria viewpoint",
-      "Hot stone bath and a farmhouse dinner afterwards"],
+      "Hot stone bath and a farmhouse dinner afterwards",
+    ],
   },
   {
     id: "bangkok-2",
@@ -339,11 +345,7 @@ export const stops: Stop[] = [
     lodgingQuery: "Yenatar Resort Raja Ampat",
     wiki: "Raja Ampat Islands",
     blurb: "Eight nights in the most biodiverse reefs on Earth. Expect patchy signal.",
-    ideas: [
-      "Piaynemo viewpoint and the Star Lagoon",
-      "Arborek and Yenbuba villages",
-      "Manta cleaning station",
-      "Kali Biru, the Blue River"],
+    ideas: ["Piaynemo viewpoint and the Star Lagoon", "Arborek and Yenbuba villages", "Manta cleaning station", "Kali Biru, the Blue River"],
   },
   {
     id: "sorong-2",
@@ -445,7 +447,7 @@ export const stops: Stop[] = [
       "Pancake Rocks, about 30 min walk, good visitor centre (2 h drive)",
       "Truman Track tide pools at low tide, 15 min walk",
       "Punakaiki Cavern",
-      ],
+    ],
   },
   {
     id: "franzjosef",
@@ -466,7 +468,8 @@ export const stops: Stop[] = [
       "Franz Josef Glacier walk, 30 min (2¼ h drive)",
       "West Coast Wildlife Centre to see kiwis",
       "Heli-hike",
-      "Eat: Snakebite Brewery, Monsoon, Blue Ice"],
+      "Eat: Snakebite Brewery, Monsoon, Blue Ice",
+    ],
   },
   {
     id: "fox",
@@ -564,7 +567,8 @@ export const stops: Stop[] = [
     arriveTime: "17:00",
     wiki: "John F. Kennedy International Airport",
     blurb: "Home. Sixty-nine days and seven countries.",
-  }];
+  },
+];
 
 export const days: DayPlan[] = [
   { date: "2026-09-28", items: ["Fly to SFO, 9:27 AM"] },
@@ -586,8 +590,22 @@ export const days: DayPlan[] = [
   { date: "2026-10-19", items: [b("Fly to Bangkok 8:50 to 10:50 AM, Vietnam Airlines VN611"), "Salil Hotel Riverside"] },
   { date: "2026-10-20", items: ["Bangkok", b("Tuk-tuk food tour, 4:30 PM pickup at the hotel")] },
   { date: "2026-10-21", items: [b("Fly to Paro, Bhutan 1:10 to 3:25 PM, Druk Air KB151 (3¼ h)"), "Drive about 1.5 h to Thimphu", "Hotel Changangkha"] },
-  { date: "2026-10-22", items: ["Tango Monastery hike, about 2.5 h round trip", "Buddha Dordenma", "Takin Preserve", "Wangditse nature hike", "Paper factory", "Centenary Farmers' Market", "Stay in Thimphu"] },
-  { date: "2026-10-23", items: ["Drive to Punakha, about 2 to 2.5 h, over Dochula Pass", "Chimi Lhakhang, Punakha Dzong, the suspension bridge", "Punatshangchu Cottage"] },
+  {
+    date: "2026-10-22",
+    items: [
+      "Tango Monastery hike, about 2.5 h round trip",
+      "Buddha Dordenma",
+      "Takin Preserve",
+      "Wangditse nature hike",
+      "Paper factory",
+      "Centenary Farmers' Market",
+      "Stay in Thimphu",
+    ],
+  },
+  {
+    date: "2026-10-23",
+    items: ["Drive to Punakha, about 2 to 2.5 h, over Dochula Pass", "Chimi Lhakhang, Punakha Dzong, the suspension bridge", "Punatshangchu Cottage"],
+  },
   { date: "2026-10-24", items: ["Punakha Valley: Khamsum Yulley Namgyal Chorten hike, nunnery, village walk"] },
   { date: "2026-10-25", items: ["Drive to Bumthang via Trongsa, about 6 h", "Pelela Pass, Chendebji Chorten, Trongsa Dzong", "Jakar Village Lodge"] },
   { date: "2026-10-26", items: ["Jakar", "Kurjey Lhakhang", "Jambay Lhakhang Drup festival"] },
@@ -600,7 +618,14 @@ export const days: DayPlan[] = [
   { date: "2026-11-02", items: ["Ubud Monkey Forest"] },
   { date: "2026-11-03", items: ["Sanur, Bali"] },
   { date: "2026-11-04", items: ["Sanur, Bali"] },
-  { date: "2026-11-05", items: [b("Fly Bali to Sorong, 8:00 AM to 12:10 PM, Garuda GA686 (3 h 10 min, one hour ahead)"), "Ferry to Waisai at 2 PM if it works out", "Stay Aston Sorong, or Rifalda Homestay in Waisai"] },
+  {
+    date: "2026-11-05",
+    items: [
+      b("Fly Bali to Sorong, 8:00 AM to 12:10 PM, Garuda GA686 (3 h 10 min, one hour ahead)"),
+      "Ferry to Waisai at 2 PM if it works out",
+      "Stay Aston Sorong, or Rifalda Homestay in Waisai",
+    ],
+  },
   { date: "2026-11-06", items: ["Speedboat direct to Yenatar Resort, Raja Ampat", "Possible stop at Kali Biru, the Blue River"] },
   { date: "2026-11-07", items: ["Raja Ampat"] },
   { date: "2026-11-08", items: ["Raja Ampat"] },
@@ -612,12 +637,47 @@ export const days: DayPlan[] = [
   { date: "2026-11-14", items: ["Leave Yenatar", "Stay Aston Sorong"] },
   { date: "2026-11-15", items: [b("Fly Sorong to Bali 1:30 to 3:30 PM, Garuda GA687 (3 h)"), "Tandjung Sari Hotel, Sanur"] },
   { date: "2026-11-16", items: ["Bali"] },
-  { date: "2026-11-17", items: [b("Leave Bali 11:30 AM, arrive Melbourne 8:10 PM, Jetstar JQ32 (5½ h)"), b("Pick up car: East Coast Car Rental"), "Drive about 1 h to Atura Dandenong"] },
-  { date: "2026-11-18", items: ["Drive to Phillip Island, about 1¼ h", b("Koala Reserve and Churchill Island"), b("Penguin Parade 7:30 PM, guided tour 7:45 PM"), "Stay Ramada Phillip Island"] },
+  {
+    date: "2026-11-17",
+    items: [
+      b("Leave Bali 11:30 AM, arrive Melbourne 8:10 PM, Jetstar JQ32 (5½ h)"),
+      b("Pick up car: East Coast Car Rental"),
+      "Drive about 1 h to Atura Dandenong",
+    ],
+  },
+  {
+    date: "2026-11-18",
+    items: [
+      "Drive to Phillip Island, about 1¼ h",
+      b("Koala Reserve and Churchill Island"),
+      b("Penguin Parade 7:30 PM, guided tour 7:45 PM"),
+      "Stay Ramada Phillip Island",
+    ],
+  },
   { date: "2026-11-19", items: ["Drive back to Melbourne", "Stay voco Melbourne Central"] },
-  { date: "2026-11-20", items: ["Drop the car at Melbourne Airport", b("Fly Melbourne to Christchurch 9:10 AM to 2:20 PM, Qantas QF167 (3½ h)"), b("Pick up the Apex rental car"), "Castle Hill rocks, about 45 min of walking", "Drive about 1.2 h to Grasmere"] },
-  { date: "2026-11-21", items: ["Drive 30 min to Arthur's Pass: Devil's Punchbowl, 1 h easy hike", "Drive about 2 h to Pancake Rocks, Punakaiki", "Truman Track tide pools if the tide is low", "Stay Paroa Hotel, Greymouth (45 min)"] },
-  { date: "2026-11-22", items: ["Hokitika, 25 min", "Hokitika Gorge suspension bridge", "Drive 2¼ h south", "Franz Josef Glacier, 30 min walk", "Stay Rainforest Retreat"] },
+  {
+    date: "2026-11-20",
+    items: [
+      "Drop the car at Melbourne Airport",
+      b("Fly Melbourne to Christchurch 9:10 AM to 2:20 PM, Qantas QF167 (3½ h)"),
+      b("Pick up the Apex rental car"),
+      "Castle Hill rocks, about 45 min of walking",
+      "Drive about 1.2 h to Grasmere",
+    ],
+  },
+  {
+    date: "2026-11-21",
+    items: [
+      "Drive 30 min to Arthur's Pass: Devil's Punchbowl, 1 h easy hike",
+      "Drive about 2 h to Pancake Rocks, Punakaiki",
+      "Truman Track tide pools if the tide is low",
+      "Stay Paroa Hotel, Greymouth (45 min)",
+    ],
+  },
+  {
+    date: "2026-11-22",
+    items: ["Hokitika, 25 min", "Hokitika Gorge suspension bridge", "Drive 2¼ h south", "Franz Josef Glacier, 30 min walk", "Stay Rainforest Retreat"],
+  },
   { date: "2026-11-23", items: ["30 min to Fox Glacier", "Lake Matheson walk, 1½ h", "Minnehaha glow-worm walk at night", "Stay Mt Cook View Motel"] },
   { date: "2026-11-24", items: ["Drive to Wānaka, 3½ h, stop at the Blue Pools", "Wine tour", "Stay Apartments on Helwick"] },
   { date: "2026-11-25", items: [b("Rob Roy Glacier guided walk, 9 AM (Viator)")] },
@@ -630,4 +690,5 @@ export const days: DayPlan[] = [
   { date: "2026-12-02", items: ["Aoraki / Mt Cook", "Hooker Valley Track"] },
   { date: "2026-12-03", items: ["Drive 3½ h to Christchurch", b("Return the car by 3:30 PM"), "Stay Novotel Christchurch Airport"] },
   { date: "2026-12-04", items: [b("Fly Christchurch to Auckland 9:40 to 11:05 AM, Air New Zealand"), "Stay M Social Auckland"] },
-  { date: "2026-12-05", items: [b("Fly Auckland to JFK, Air New Zealand, leave 7:15 PM, land 5:00 PM the same day New York time")] }];
+  { date: "2026-12-05", items: [b("Fly Auckland to JFK, Air New Zealand, leave 7:15 PM, land 5:00 PM the same day New York time")] },
+];
