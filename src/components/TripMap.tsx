@@ -64,11 +64,14 @@ function LeafletMap({ stops, visitedCount, status }: { stops: StopWithTimes[]; v
 
   return (
     <MapContainer bounds={bounds} scrollWheelZoom={false} className="h-[420px] w-full" worldCopyJump>
+      {/* Satellite imagery with an English place-name overlay: a "hybrid" map. */}
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='Tiles &copy; <a href="https://www.esri.com/">Esri</a>, Maxar, Earthstar Geographics, and the GIS User Community'
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+        maxZoom={18}
       />
-      <Polyline positions={remaining} pathOptions={{ color: "#a8a29e", weight: 2, dashArray: "4 6" }} />
+      <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}" maxZoom={18} />
+      <Polyline positions={remaining} pathOptions={{ color: "#fafaf9", weight: 2, opacity: 0.8, dashArray: "4 6" }} />
       {done.length > 1 && <Polyline positions={done} pathOptions={{ color: "#d97706", weight: 3 }} />}
       {plane && status.kind === "flying" && (
         <Polyline positions={[pacific(status.from!), plane]} pathOptions={{ color: "#0284c7", weight: 3 }} />
@@ -82,7 +85,7 @@ function LeafletMap({ stops, visitedCount, status }: { stops: StopWithTimes[]; v
             center={pacific(s)}
             radius={isCurrent ? 9 : 5}
             pathOptions={{
-              color: isCurrent ? "#b45309" : visited ? "#d97706" : "#78716c",
+              color: isCurrent ? "#ffffff" : visited ? "#fde68a" : "#e7e5e4",
               fillColor: isCurrent ? "#f59e0b" : visited ? "#fbbf24" : "#ffffff",
               fillOpacity: 1,
               weight: isCurrent ? 3 : 2,

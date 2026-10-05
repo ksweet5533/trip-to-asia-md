@@ -1,170 +1,505 @@
 {
   "San Francisco": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zeppelin-ride-020100925-195_%285029394846%29.jpg/1280px-Zeppelin-ride-020100925-195_%285029394846%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zeppelin-ride-020100925-195_%285029394846%29.jpg/330px-Zeppelin-ride-020100925-195_%285029394846%29.jpg",
     "page": "https://en.wikipedia.org/wiki/San_Francisco",
     "description": "City and county in California, US",
     "extract": "San Francisco, officially the City and County of San Francisco, is the fourth-most populous city in California and the 17th-most populous in the United States, with a population of 826,079 in 2025. Among U.S. cities with a population of 200,000 or more, San Francisco is ranked first by per capita income, third by population density, and sixth by aggregate income as of 2024. Some 4.6 million residents live in the city's metropolitan statistical area, which is the 13th-largest in the United States. Around 9.2 million live in the San Jose–San Francisco–Oakland combined statistical area, the fifth-largest in the United States."
   },
   "Ho Chi Minh City": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ho_Chi_Minh_City%2C_City_Hall%2C_2020-01_CN-03.jpg/1280px-Ho_Chi_Minh_City%2C_City_Hall%2C_2020-01_CN-03.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ho_Chi_Minh_City%2C_City_Hall%2C_2020-01_CN-03.jpg/330px-Ho_Chi_Minh_City%2C_City_Hall%2C_2020-01_CN-03.jpg",
     "page": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City",
     "description": "Largest city in Vietnam",
     "extract": "Ho Chi Minh City, also known as Saigon, is the most populous city and centrally-governed city of Vietnam, with a population of more than 14 million in 2025. Its geography is defined by rivers and canals, of which the largest is the Saigon River."
   },
   "Hanoi": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hanoi_skyline_with_Ba_Vi_Mountain.jpg/1280px-Hanoi_skyline_with_Ba_Vi_Mountain.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hanoi_skyline_with_Ba_Vi_Mountain.jpg/330px-Hanoi_skyline_with_Ba_Vi_Mountain.jpg",
     "page": "https://en.wikipedia.org/wiki/Hanoi",
     "description": "Capital and centrally-governed city of Vietnam",
     "extract": "Hanoi is the capital and second-most populous centrally-governed city of Vietnam. It covers an area of 3,358.6 km2 (1,296.8 mi2), and as of 2025 has a population of 8,807,523. Hanoi had the second-highest gross regional domestic product of all Vietnamese provinces and centrally-governed cities at US$48 billion in 2023, behind Ho Chi Minh City. It hosts 78 foreign embassies, the headquarters of the Vietnam People's Army (VPA), its Vietnam National University system, and other governmental organizations. Hanoi had 18.7 million domestic and international visitors in 2022. It hosts the Imperial Citadel of Thăng Long, Ho Chi Minh Mausoleum, Hoàn Kiếm Lake, West Lake, and Ba Vì National Park near the outskirts of the municipality. Hanoi's urban area has architectural styles, including pre-colonial Vietnamese architecture, French colonial architecture, brutalist apartments and disorganized alleys and tube houses stemming from the city's growth in the 20th century."
   },
   "Hạ Long Bay": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Ha_Long_Bay_in_2019.jpg/1280px-Ha_Long_Bay_in_2019.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Ha_Long_Bay_in_2019.jpg/330px-Ha_Long_Bay_in_2019.jpg",
     "page": "https://en.wikipedia.org/wiki/H%E1%BA%A1_Long_Bay",
     "description": "Bay in northern Vietnam",
     "extract": "Hạ Long Bay or Halong Bay is a bay located in Northeastern Vietnam, administered by the city of Quảng Ninh. The name Hạ Long means \"descending dragon\". It features thousands of limestone karsts and islets in various shapes and sizes, for which it is listed as a UNESCO World Heritage Site and a popular travel destination. The bay is also part of a larger area that includes Bai Tu Long Bay to the northeast and Cát Bà Island to the southwest. These zones share similar geological, geographical, geomorphological, climatic, and cultural characteristics."
   },
   "Tam Cốc-Bích Động": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Tam_Coc_from_Summit_-_August_2023.jpg/1280px-Tam_Coc_from_Summit_-_August_2023.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Tam_Coc_from_Summit_-_August_2023.jpg/330px-Tam_Coc_from_Summit_-_August_2023.jpg",
     "page": "https://en.wikipedia.org/wiki/Tam_C%E1%BB%91c_%E2%80%93_B%C3%ADch_%C4%90%E1%BB%99ng",
     "description": "Popular tourist destination in north Vietnam",
     "extract": "Tam Cốc – Bích Động is a popular tourist destination in north Vietnam and part of the Tràng An Scenic Landscape Complex UNESCO World Heritage site. It is located in Ninh Binh province, near the village of Tam Cốc. The closest city is Hoa Lư. It consists of two distinct attractions: Tam Cốc, a flooded cave karst system; and Bích Động, a series of mountain temples."
   },
   "Pù Luông Nature Reserve": {
     "src": null,
+    "thumb": null,
     "page": "https://en.wikipedia.org/wiki/P%C3%B9_Lu%C3%B4ng_Nature_Reserve",
     "description": "Nature reserve in northern Vietnam",
     "extract": "Pù Luông Nature Reserve is a nature reserve in northern Vietnam. This nature reserve is situated in Quan Hóa and Bá Thước districts of Thanh Hóa Province, North Central Coast region of Vietnam. Pu Luong Nature Reserve is bordered by Mai Châu, Tân Lạc and Lạc Sơn districts of Hòa Bình Province. The reserve is located along two parallel mountain ridges, that run from north-west to south-east, and are divided by a central valley, which contains several human settlements and a large agricultural land area, therefore, is not included within the nature reserve."
   },
   "Mai Châu district": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Mai_Chau_-_H%C3%A4user_im_Reisfeld.jpg/1280px-Mai_Chau_-_H%C3%A4user_im_Reisfeld.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Mai_Chau_-_H%C3%A4user_im_Reisfeld.jpg/330px-Mai_Chau_-_H%C3%A4user_im_Reisfeld.jpg",
     "page": "https://en.wikipedia.org/wiki/Mai_Ch%C3%A2u_district",
     "description": "Rural Ward in Northwest, Vietnam",
     "extract": "Mai Châu [maːj˧˥:ʨəw˧˥] is a former rural ward of Phú Thọ province in the Northwest region of Vietnam."
   },
   "Bangkok": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/4Y1A1159_Bangkok_%2833536795515%29.jpg/1280px-4Y1A1159_Bangkok_%2833536795515%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/4Y1A1159_Bangkok_%2833536795515%29.jpg/330px-4Y1A1159_Bangkok_%2833536795515%29.jpg",
     "page": "https://en.wikipedia.org/wiki/Bangkok",
     "description": "Capital and largest city of Thailand",
     "extract": "Bangkok, known in Thai as Krung Thep Maha Nakhon and colloquially as Krung Thep, is the capital and largest city of Thailand. The city occupies 1,568.7 square kilometres (605.7 sq mi) in the Chao Phraya River delta in central Thailand and has an estimated population of 9.1 million people as of 2024, 15.9% of the country's population. Over 17.4 million people live within the surrounding Bangkok Metropolitan Region as of the 2021 estimate, making Bangkok a megacity and an extreme primate city, dwarfing Thailand's other urban centres in both size and importance to the national economy."
   },
   "Thimphu": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Tashich%C3%B6dzong_Thimphu-2008-01-23.jpg/1280px-Tashich%C3%B6dzong_Thimphu-2008-01-23.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Tashich%C3%B6dzong_Thimphu-2008-01-23.jpg/330px-Tashich%C3%B6dzong_Thimphu-2008-01-23.jpg",
     "page": "https://en.wikipedia.org/wiki/Thimphu",
     "description": "Capital and largest city of Bhutan",
     "extract": "Thimphu is the capital and largest city of Bhutan. It is situated in the western central part of Bhutan, and the surrounding valley is one of Bhutan's dzongkhags, the Thimphu District. The ancient capital city of Punakha was replaced by Thimphu as the capital in 1955, and in 1961 Thimphu was officially declared the capital of the Kingdom of Bhutan by the 3rd Druk Gyalpo Jigme Dorji Wangchuck."
   },
   "Punakha": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/PunakhaDzong.jpg/1280px-PunakhaDzong.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/PunakhaDzong.jpg/330px-PunakhaDzong.jpg",
     "page": "https://en.wikipedia.org/wiki/Punakha",
     "description": "Administrative centre in Punakha dzongkhag, Bhutan",
     "extract": "Punakha is the administrative centre of Punakha dzongkhag, one of the 20 districts of Bhutan. Punakha was the capital of Bhutan and the seat of government until 1955, when the capital was moved to Thimphu. It is about 72 km away from Thimphu, and it takes about 3 hours by car from the capital. Unlike Thimphu, it is quite warm in winter and hot in summer. It is located at an elevation of 1,200 metres above sea level, and rice is grown as the main crop along the river valleys of two main rivers of Bhutan, the Pho Chhu and Mo Chhu. Dzongkha is widely spoken in this district."
   },
   "Bumthang District": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Jakar_Dzong_in_Bumthang.jpg/1280px-Jakar_Dzong_in_Bumthang.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Jakar_Dzong_in_Bumthang.jpg/330px-Jakar_Dzong_in_Bumthang.jpg",
     "page": "https://en.wikipedia.org/wiki/Bumthang_District",
     "description": "District of Bhutan",
     "extract": "Bumthang District is one of the 20 dzongkhag (districts) comprising Bhutan. It contains numerous temples and Buddhist sacred sites. The district is divided into four village blocks, each corresponding to a major glacial valley: Choekor, Tang, Ura, and Chhume. The latter valley is also called Bumthang, lending its name to the whole district."
   },
   "Phobjikha Valley": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/The_Phobjikha_Valley_in_Autumn.jpg/1280px-The_Phobjikha_Valley_in_Autumn.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/The_Phobjikha_Valley_in_Autumn.jpg/330px-The_Phobjikha_Valley_in_Autumn.jpg",
     "page": "https://en.wikipedia.org/wiki/Phobjikha_Valley",
     "description": "Valley in Bhutan",
     "extract": "The Phobjikha Valley ཕོབ་སྦྱིས་ཁ spelled as Pho-sbis-kha, is a vast U-shaped valley in central Bhutan. The valley houses one of the impressive ancient Buddhist monasteries in Bhutan known as Gangteng Monastery of the Nyingma sect in central Bhutan. The graceful black-necked cranes in Bhutan from the Tibetan Plateau visit the valley during the winter season to roost. On arrival in the Phobjikha Valley in the last week of October, the black-necked cranes circle the Gangteng Monastery three times and also repeat the process while returning to Tibet."
   },
   "Paro Taktsang": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Paro_Taktsang%2C_Bhutan_%28edited%29.jpg/1280px-Paro_Taktsang%2C_Bhutan_%28edited%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Paro_Taktsang%2C_Bhutan_%28edited%29.jpg/330px-Paro_Taktsang%2C_Bhutan_%28edited%29.jpg",
     "page": "https://en.wikipedia.org/wiki/Paro_Taktsang",
     "description": "Buddhist temple complex in Paro, Bhutan",
     "extract": "Paro Taktsang is a sacred Vajrayana Himalayan Buddhist site located in the cliffside of the upper Paro valley in Bhutan. It is one of thirteen Tiger's Nest caves in historical Tibet in which Padmasambhava practiced and taught Vajrayana."
   },
   "Sanur, Bali": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Sanur_Beach.JPG/1280px-Sanur_Beach.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Sanur_Beach.JPG/330px-Sanur_Beach.JPG",
     "page": "https://en.wikipedia.org/wiki/Sanur%2C_Bali",
     "description": "Place in Bali, Indonesia",
     "extract": "Sanur is a coastal stretch of beach east of Denpasar in southeast Bali, which has grown into a little town in its own right. A 5.1 km (3.2 mi) area of Sanur's coastline, from Matahari Terbit Beach to Mertasari Beach, was reclaimed in 2008."
   },
   "Sorong": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Sorong_view-1.jpg/1280px-Sorong_view-1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Sorong_view-1.jpg/330px-Sorong_view-1.jpg",
     "page": "https://en.wikipedia.org/wiki/Sorong",
     "description": "Capital and largest city of Southwest Papua, Indonesia",
     "extract": "Sorong is the largest city and the capital of the Indonesian province of Southwest Papua. The city is located on the western tip of the island of New Guinea with its only land borders being with Sorong Regency. It is the gateway to Indonesia's Raja Ampat Islands, species rich coral reef islands in an area considered the heart of the world's coral reef biodiversity. It also is the logistics hub for Indonesia's thriving eastern oil and gas frontier. Sorong experienced rapid growth during the decade from 2010, and further growth is anticipated as Sorong becomes linked by road to other frontier towns in Papua's Bird's Head Peninsula. The official estimate of population as of mid 2024 was 286,028 - comprising 150,236 males and 135,729 females. The suburban area of Sorong city contains tropical rainforest and mangrove forest that has increasingly become popular as ecotourism attractions especially for birdwatching or wildlife watching."
   },
   "Raja Ampat Islands": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Raja_Ampat_Islands_-_journal.pbio.1001457.g001.png",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Raja_Ampat_Islands_-_journal.pbio.1001457.g001.png/330px-Raja_Ampat_Islands_-_journal.pbio.1001457.g001.png",
     "page": "https://en.wikipedia.org/wiki/Raja_Ampat_Islands",
     "description": "Archipelago in Southwest Papua, Indonesia",
     "extract": "Raja Ampat, or the Four Kings, is an archipelago located off the northwest tip of Bird's Head Peninsula, Southwest Papua province, Indonesia. It comprises over 1,500 small islands, cays, and shoals around the four main islands of Misool, Salawati, Batanta, and Waigeo, and the smaller island of Kofiau."
   },
   "Melbourne": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Melbourne_skyline_sor.jpg/1280px-Melbourne_skyline_sor.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Melbourne_skyline_sor.jpg/330px-Melbourne_skyline_sor.jpg",
     "page": "https://en.wikipedia.org/wiki/Melbourne",
     "description": "Capital city of Victoria, Australia",
     "extract": "Melbourne is the capital and most populous city of the Australian state of Victoria and the second-most populous city in Australia. The city's name generally refers to a 9,993-square-kilometre (3,858 sq mi) area, comprising an urban agglomeration of 30 local government areas. The name is also used specifically to refer to the local government area, also named the City of Melbourne, whose administrative area is centred on the Melbourne central business district and some immediate surrounds."
   },
   "Phillip Island": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/8/83/Map_of_Phillip_Island%2C_Victoria.png",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Map_of_Phillip_Island%2C_Victoria.png/330px-Map_of_Phillip_Island%2C_Victoria.png",
     "page": "https://en.wikipedia.org/wiki/Phillip_Island",
     "description": "Island in Victoria, Australia",
     "extract": "Phillip Island is an Australian island about 125 km (78 mi) south-southeast of Melbourne, Victoria. The island is named after Governor Arthur Phillip, the first Governor of New South Wales, by explorer and seaman George Bass, who sailed in a whaleboat, arriving from Sydney on 5 January 1798."
   },
   "Castle Hill, New Zealand": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Castle_Hill_New_Zealand.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Castle_Hill_New_Zealand.jpg/330px-Castle_Hill_New_Zealand.jpg",
     "page": "https://en.wikipedia.org/wiki/Castle_Hill%2C_New_Zealand",
     "description": "Place in New Zealand",
     "extract": "Castle Hill is a location and a high country station in New Zealand's South Island. It is located at an altitude of 700 metres, close to State Highway 73 between Springfield and Arthur's Pass. It is private property and located within the Kura Tawhiti Conservation Area."
   },
   "Punakaiki": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Punakaiki_MRD_01.jpg/1280px-Punakaiki_MRD_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Punakaiki_MRD_01.jpg/330px-Punakaiki_MRD_01.jpg",
     "page": "https://en.wikipedia.org/wiki/Punakaiki",
     "description": "Place in West Coast, New Zealand",
     "extract": "Punakaiki is a small village on the West Coast of the South Island of New Zealand. It is located between Westport and Greymouth on State Highway 6, the only through-road on the West Coast. Punakaiki is immediately adjacent to Paparoa National Park, and is also the access point for a popular visitor attraction, the Pancake Rocks and Blowholes."
   },
   "Franz Josef Glacier": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Franz_josef_Glacier_LC0250.jpg/1280px-Franz_josef_Glacier_LC0250.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Franz_josef_Glacier_LC0250.jpg/330px-Franz_josef_Glacier_LC0250.jpg",
     "page": "https://en.wikipedia.org/wiki/Franz_Josef_Glacier",
     "description": "Glacier in the Southern Alps, New Zealand",
     "extract": "The Franz Josef Glacier is a 12-kilometre-long (7.5 mi) temperate maritime glacier in Westland Tai Poutini National Park on the West Coast of New Zealand's South Island. Together with the Fox Glacier 20 kilometres (12 mi) to the south, and a third glacier, it descends from the Southern Alps to less than 300 metres (980 ft) above sea level."
   },
   "Fox Glacier": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/2/20/Fox-Gletscher1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Fox-Gletscher1.jpg/330px-Fox-Gletscher1.jpg",
     "page": "https://en.wikipedia.org/wiki/Fox_Glacier",
     "description": "Glacier in the Southern Alps, New Zealand",
     "extract": "Fox Glacier is an 11.7-kilometre-long (7.3 mi) (2022) temperate maritime glacier located in Westland Tai Poutini National Park on the West Coast of New Zealand's South Island. Covering about 32 km2 including its tributaries, Fox Glacier is the third largest glacier in New Zealand. Like nearby Franz Josef Glacier, Fox Glacier is one of the most accessible glaciers in the world, with a terminal face as low as 300 m above sea level, close to the village of Fox Glacier. It is a major tourist attraction and about 1000 people daily visit it during high tourist season."
   },
   "Wānaka": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/LakeWanakaNov262024_01.jpg/1280px-LakeWanakaNov262024_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/LakeWanakaNov262024_01.jpg/330px-LakeWanakaNov262024_01.jpg",
     "page": "https://en.wikipedia.org/wiki/W%C4%81naka",
     "description": "Resort town in Otago, New Zealand",
     "extract": "Wānaka is a ski and summer resort town in the Otago region of the South Island of New Zealand. At the southern end of Lake Wānaka, it is at the start of the Clutha River and is the gateway to Mount Aspiring National Park."
   },
   "Queenstown, New Zealand": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Queenstown_1_%288168013172%29.jpg/1280px-Queenstown_1_%288168013172%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Queenstown_1_%288168013172%29.jpg/330px-Queenstown_1_%288168013172%29.jpg",
     "page": "https://en.wikipedia.org/wiki/Queenstown%2C_New_Zealand",
     "description": "Resort town in New Zealand's South Island",
     "extract": "Queenstown is a resort town in Otago in the south-west of New Zealand's South Island. It is the largest town in the Queenstown-Lakes District, and the primary administrative centre."
   },
   "Aoraki / Mount Cook": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mt_Cook_LC0247.jpg/1280px-Mt_Cook_LC0247.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mt_Cook_LC0247.jpg/330px-Mt_Cook_LC0247.jpg",
     "page": "https://en.wikipedia.org/wiki/Aoraki_%2F_Mount_Cook",
     "description": "Highest mountain in New Zealand",
     "extract": "Aoraki / Mount Cook is the highest mountain in New Zealand. Its height, as of 2014, is listed as 3,724 metres. It is situated in the Southern Alps, the mountain range that runs the length of the South Island. A popular tourist destination, it is also a favourite challenge for mountaineers. Aoraki / Mount Cook consists of three summits: from south to north, the Low Peak, the Middle Peak and the High Peak. The summits lie slightly south and east of the main divide of the Southern Alps, with the Tasman Glacier to the east and the Hooker Glacier to the southwest. Mount Cook is ranked 10th in the world by topographic isolation."
   },
   "Christchurch": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/The_%22Brill%22_Tram_178.New_Regent_St_Christchurch._%2811510530335%29.jpg/1280px-The_%22Brill%22_Tram_178.New_Regent_St_Christchurch._%2811510530335%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/The_%22Brill%22_Tram_178.New_Regent_St_Christchurch._%2811510530335%29.jpg/330px-The_%22Brill%22_Tram_178.New_Regent_St_Christchurch._%2811510530335%29.jpg",
     "page": "https://en.wikipedia.org/wiki/Christchurch",
     "description": "City in Canterbury, New Zealand",
     "extract": "Christchurch is the largest city in the South Island and the second-largest city by urban area population in New Zealand. Christchurch has an urban population of 407,800, and a metropolitan population of 556,500. It is located in the Canterbury Region, near the centre of the east coast of the South Island, east of the Canterbury Plains. It is located near the southern end of Pegasus Bay, and is bounded to the east by the Pacific Ocean and to the south by the ancient volcanic complex of the Banks Peninsula. The Avon River / Ōtākaro winds through the centre of the city, with a large urban park along its banks. With the exception of the Port Hills, it is a relatively flat city, on an average about 20 m (66 ft) above sea level. Christchurch has a reputation for being an English city, with its architectural identity and nickname the 'Garden City' due to similarities with garden cities in England, but also has a historic Māori heritage. Christchurch has a temperate oceanic climate with moderate rainfall."
   },
   "Auckland": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Auckland_skyline_-_May_2024_%282%29.jpg/1280px-Auckland_skyline_-_May_2024_%282%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Auckland_skyline_-_May_2024_%282%29.jpg/330px-Auckland_skyline_-_May_2024_%282%29.jpg",
     "page": "https://en.wikipedia.org/wiki/Auckland",
     "description": "Largest city in New Zealand",
     "extract": "Auckland is a large metropolitan city in the North Island of New Zealand. It has an urban population of approximately 1,547,200. It is located in the greater Auckland Region, the area governed by Auckland Council, which includes outlying rural areas and the islands of the Hauraki Gulf, and which has a total population of 1,816,000 as of June 2025. It is the most populous city of New Zealand and the fifth-most populous city in Oceania."
   },
   "John F. Kennedy International Airport": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/JFK_Aerial_Nov_14_2018.jpg/1280px-JFK_Aerial_Nov_14_2018.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/JFK_Aerial_Nov_14_2018.jpg/330px-JFK_Aerial_Nov_14_2018.jpg",
     "page": "https://en.wikipedia.org/wiki/John_F._Kennedy_International_Airport",
     "description": "International airport serving New York City",
     "extract": "John F. Kennedy International Airport is the primary international airport serving the New York metropolitan area. It is located on the southwestern shore of Long Island, in Queens, New York City, bordering Jamaica Bay. It is the busiest of the three airports in the New York airport system, the sixth-busiest airport in the United States. The airport, which covers 5,200 acres (2,104 ha), is the largest in the New York metropolitan area. Nearly 100 airlines operate from JFK Airport, with nonstop or direct flights to destinations on all six permanently inhabited continents."
+  },
+  "Hoàn Kiếm Lake": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/1280px-Thap_Rua.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/330px-Thap_Rua.jpg",
+    "page": "https://en.wikipedia.org/wiki/Ho%C3%A0n_Ki%E1%BA%BFm_Lake",
+    "description": "Lake in Hanoi, Vietnam",
+    "extract": "Hoàn Kiếm Lake, also known as Sword Lake or Tả Vọng Lake, is a fresh water lake, measuring some 12 ha in the historical center of Hanoi, the capital city of Vietnam."
+  },
+  "Old Quarter, Hanoi": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg/1280px-Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg/330px-Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Old_Quarter%2C_Hanoi",
+    "description": "Vietnamese historical civic urban core",
+    "extract": "The Old Quarter  is the name commonly given to the historical civic urban core of Hanoi, Vietnam, located outside the Imperial Citadel of Thăng Long. This quarter used to be the residential, manufacturing and commercial center, where each street was specialized in one specific type of manufacturing or commerce."
+  },
+  "Cát Bà Island": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/92/Cat_Ba_town.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Cat_Ba_town.JPG/330px-Cat_Ba_town.JPG",
+    "page": "https://en.wikipedia.org/wiki/C%C3%A1t_B%C3%A0_Island",
+    "description": "Island in Haiphong, Vietnam",
+    "extract": "Cát Bà Island is the largest of the 367 islands spanning 262.41 km2 (101.32 mi2) that comprise the Cat Ba Archipelago, which makes up the southeastern edge of Lan Ha Bay in Northern Vietnam and maintains the dramatic and rugged features of Ha Long Bay. The archipelago has been a UNESCO Biosphere Reserve since 2004 and a part of Ha Long Bay – Cat Ba Archipelago World Heritage Site since 2023."
+  },
+  "Tràng An Scenic Landscape Complex": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Muaxuantamcoc.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Muaxuantamcoc.jpg/330px-Muaxuantamcoc.jpg",
+    "page": "https://en.wikipedia.org/wiki/Tr%C3%A0ng_An_Scenic_Landscape_Complex",
+    "description": "UNESCO World Heritage Site in Red River Delta, Vietnam",
+    "extract": "Tràng An is a scenic area located in Ninh Bình Province, near Hoa Lư, Vietnam renowned for its boat cave tours.\nOn 23 June 2014, at the 38th session of the World Heritage Committee in Doha, the Trang An Scenic Landscape Complex was inscribed as a UNESCO World Heritage Site."
+  },
+  "Bái Đính Temple": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/M%E1%BB%98T_G%C3%93C_CH%C3%99A_B%C3%81I_%C4%90%C3%8DNH_-_panoramio.jpg/1280px-M%E1%BB%98T_G%C3%93C_CH%C3%99A_B%C3%81I_%C4%90%C3%8DNH_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/M%E1%BB%98T_G%C3%93C_CH%C3%99A_B%C3%81I_%C4%90%C3%8DNH_-_panoramio.jpg/330px-M%E1%BB%98T_G%C3%93C_CH%C3%99A_B%C3%81I_%C4%90%C3%8DNH_-_panoramio.jpg",
+    "page": "https://en.wikipedia.org/wiki/B%C3%A1i_%C4%90%C3%ADnh_Pagoda",
+    "description": "Buddhist pagoda complex in Vietnam",
+    "extract": "Bái Đính Pagoda or Bái Đính Pagoda Spiritual and Cultural Complex is a complex of Buddhist temples on Bái Đính Mountain in Gia Viễn District, Ninh Bình Province, Vietnam. The compound consists of the original old temple and a newly created larger temple. It is considered one of the largest Buddhist temples in Vietnam and has become a popular site for Buddhist pilgrimages from across Vietnam."
+  },
+  "Temple of Literature, Hanoi": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/1280px-Hanoi_Temple_of_Literature_%28cropped%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/330px-Hanoi_Temple_of_Literature_%28cropped%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Temple_of_Literature%2C_Hanoi",
+    "description": "Temple dedicated to Confucius",
+    "extract": "Văn Miếu, literally translated as Temple of Literature, is a temple dedicated to Confucius in Hanoi, northern Vietnam. The temple was founded and first built in 1070 at the time of Emperor Lý Thánh Tông, and it hosted the Imperial Academy, Vietnam's first national university, from 1076 to 1779. In 1803, The academy was moved to the new capital of Nguyen dynasty in Hue."
+  },
+  "Trấn Quốc Pagoda": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Tran_Quoc_Pagoda%2C_Hanoi%2C_Vietnam.jpg/1280px-Tran_Quoc_Pagoda%2C_Hanoi%2C_Vietnam.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Tran_Quoc_Pagoda%2C_Hanoi%2C_Vietnam.jpg/330px-Tran_Quoc_Pagoda%2C_Hanoi%2C_Vietnam.jpg",
+    "page": "https://en.wikipedia.org/wiki/Tr%E1%BA%A5n_Qu%E1%BB%91c_Pagoda",
+    "description": "Buddhist temple in Hanoi, Vietnam",
+    "extract": "Trấn Quốc Pagoda, the oldest Buddhist temple in Hanoi, is located on a small island near the southeastern shore of Hanoi's West Lake, Vietnam."
+  },
+  "Wat Arun": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg/1280px-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg/330px-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg",
+    "page": "https://en.wikipedia.org/wiki/Wat_Arun",
+    "description": "Buddhist temple in central Bangkok, Thailand",
+    "extract": "Wat Arun Ratchawararam Ratchawaramahawihan or Wat Arun is a Buddhist temple (wat) in the Bangkok Yai district of Bangkok, Thailand. It is situated in Thonburi on the west bank of the Chao Phraya River. The temple derives its name from the Hindu god Aruṇa, often personified as the rays of the rising sun. Built with a fusion of Indian influences, incorporating elements of both Hindu and Buddhist symbolism, as well as reflecting Siamese tradition and identity. Wat Arun is among the best known of Thailand's landmarks. Although the temple has existed since at least the 17th century, its distinctive prang (spire) was built in the early 19th century during the reigns of Rama II and Rama III."
+  },
+  "Chao Phraya River": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg/1280px-Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg/330px-Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg",
+    "page": "https://en.wikipedia.org/wiki/Chao_Phraya_River",
+    "description": "Major river in Thailand",
+    "extract": "The Chao Phraya River is the major river in Thailand, with its low alluvial plain forming the centre of the country. It flows through Bangkok and then into the Gulf of Thailand."
+  },
+  "Paro Airport": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Paro_day_1-58_%288202279871%29.jpg/1280px-Paro_day_1-58_%288202279871%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Paro_day_1-58_%288202279871%29.jpg/330px-Paro_day_1-58_%288202279871%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Paro_International_Airport",
+    "description": "International airport in Bhutan",
+    "extract": "Paro International Airport is the sole international airport of the four airports in Bhutan. It is 6 kilometres from Paro in a deep valley on the bank of the river Paro Chhu. With surrounding peaks as high as 5,500 metres (18,000 ft), it is considered one of the world's most challenging airports, and only a very small number of pilots are certified to land at the airport."
+  },
+  "Tango Monastery": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/TangoMonastery.jpg/1280px-TangoMonastery.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/TangoMonastery.jpg/330px-TangoMonastery.jpg",
+    "page": "https://en.wikipedia.org/wiki/Tango_Monastery",
+    "description": "Buddhist monastery in Thimphu, Bhutan",
+    "extract": "The Tango Monastery is a Buddhist monastery located 14 kilometres (8.7 mi) to the north of the capital city of Thimphu in Bhutan, near Cheri Mountain. It was founded by Phajo Drugom Zhigpo in the 13th century and built in its present form by Tenzin Rabgye, the 4th Temporal Ruler in 1688. In 1616, the Tibetan lama Shabdrung Ngawang Namgyal meditated in its cave. The self-emanated form of the wrathful Hayagriva is deified in the monastery. It belongs to the Drukpa Kagyu School\nof Buddhism in Bhutan."
+  },
+  "Buddha Dordenma": {
+    "src": null,
+    "page": "https://en.wikipedia.org/wiki/Buddha%20Dordenma",
+    "description": "",
+    "extract": ""
+  },
+  "Motithang Takin Preserve": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Takin%2C_Thimphu_mini-zoo.jpg/1280px-Takin%2C_Thimphu_mini-zoo.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Takin%2C_Thimphu_mini-zoo.jpg/330px-Takin%2C_Thimphu_mini-zoo.jpg",
+    "page": "https://en.wikipedia.org/wiki/Motithang_Takin_Preserve",
+    "description": "Wildlife reserve area in Thimphu, Bhutan",
+    "extract": "Royal Takin Preserve, located in the Motithang district of Thimphu, Bhutan is a wildlife reserve area for Bhutan takin, the national animal of Bhutan. Originally a mini-zoo, it was converted into a preserve when it was discovered that the animals refrained from inhabiting the surrounding forest even when set free. The reason for declaring takin as a national animal of Bhutan on 25 November 2005 is attributed to a legend of the animal's creation in Bhutan in the 15th century by Lama Drukpa Kunley."
+  },
+  "Dochula Pass": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Druk_Wangyal_Chortens%2C_Bhutan_01.jpg/1280px-Druk_Wangyal_Chortens%2C_Bhutan_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Druk_Wangyal_Chortens%2C_Bhutan_01.jpg/330px-Druk_Wangyal_Chortens%2C_Bhutan_01.jpg",
+    "page": "https://en.wikipedia.org/wiki/Dochula_Pass",
+    "description": "High mountain pass in Bhutan",
+    "extract": "The Dochu La ( Dochu Pass; la means pass in Dzongkha) is a mountain pass in the snow covered Himalayas in Bhutan on the road from Thimphu to Punakha. 108 memorial chortens or stupas, known as the \"Druk Wangyal Chortens\", were built at the pass by Ashi Dorji Wangmo Wangchuk, the eldest Queen Mother, in memory of Bhutanese soldiers who died in 2003. There is also a monastery, called the Druk Wangyal Lhakhang (temple), built in honour of the fourth Druk Gyalpo, Jigme Singye Wangchuck. The open ground in its front yard is a venue for the annual Dochula Druk Wangyel Festival. The pass is adjacent to the country's first Royal Botanical Park."
+  },
+  "Chimi Lhakhang": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Chimi_Lhakhang%2C_Bhutan_02.jpg/1280px-Chimi_Lhakhang%2C_Bhutan_02.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Chimi_Lhakhang%2C_Bhutan_02.jpg/330px-Chimi_Lhakhang%2C_Bhutan_02.jpg",
+    "page": "https://en.wikipedia.org/wiki/Chimi_Lhakhang",
+    "description": "Buddhist monastery in Punakha, Bhutan",
+    "extract": "Chimi Lhakhang, also known as Chime Lhakhang or Monastery or temple, is a Buddhist monastery in Punakha District, Bhutan. Located near Lobesa, it stands on a round hillock and was founded and built in 1499 by the Drukpa Kagyu lama Ngawang Chogyal, who was the 14th abbot of Ralung Monastery."
+  },
+  "Punakha Dzong": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Punakha_Dzong%2C_Bhutan_02.jpg/1280px-Punakha_Dzong%2C_Bhutan_02.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Punakha_Dzong%2C_Bhutan_02.jpg/330px-Punakha_Dzong%2C_Bhutan_02.jpg",
+    "page": "https://en.wikipedia.org/wiki/Punakha_Dzong",
+    "description": "Fortress in Punakha, Bhutan",
+    "extract": "The Punakha Dzong, also known as Pungthang Dewa Chhenbi Phodrang, is the administrative centre of Punakha District in Punakha, Bhutan. Constructed by Ngawang Namgyal, 1st Zhabdrung Rinpoche, in 1637–38, it is the second oldest and second-largest dzong in Bhutan and one of its most majestic structures. The dzong houses the sacred relics of the southern Drukpa Lineage of the Kagyu school of Tibetan Buddhism, including the Rangjung Kharsapani and the sacred remains of Ngawang Namgyal and the tertön Pema Lingpa."
+  },
+  "Khamsum Yulley Namgyal Chorten": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Kamsum_Yul-le_Namgyal_Choten.jpg/1280px-Kamsum_Yul-le_Namgyal_Choten.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Kamsum_Yul-le_Namgyal_Choten.jpg/330px-Kamsum_Yul-le_Namgyal_Choten.jpg",
+    "page": "https://en.wikipedia.org/wiki/Khamsum_Yulley_Namgyal_Choeten",
+    "description": "Stupa in Bhutan",
+    "extract": "Khamsum Yulley Namgyal Chörten — chörten in the Punakha District, Bhutan.This chörten (stupa) was built in 2004 by HM The Queen Mother, Ashi Tshering Yangdon Wangchuck, in Nyizergang — about a thirty-minute walk uphill from the footbridge in Yepaisa Village.\nIt was built in accordance with the instructions of Lopon Sonam Zangpo, with the intention of bringing peace in the world in general, and to clear obstacles for the country of Bhutan in particular.\nIts exterior is in the form of a pagoda like stupa while the interior consists of four stories containing images of the deities of mandalas of Vajarakilaya.\nBartsham Lama Kunzang Wangdi, popularly known as Lama Nyingkula, a close disciple of Dudjom Rinpoche was in charge of the construction of this chörten."
+  },
+  "Pele La": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Ch%C3%B6ten_at_Pelela_pass_2021-10-24.jpg/1280px-Ch%C3%B6ten_at_Pelela_pass_2021-10-24.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Ch%C3%B6ten_at_Pelela_pass_2021-10-24.jpg/330px-Ch%C3%B6ten_at_Pelela_pass_2021-10-24.jpg",
+    "page": "https://en.wikipedia.org/wiki/Pele_La",
+    "description": "Mountain pass in Central Bhutan",
+    "extract": "Pele La is a high-mountain motorable pass located in Bhutan."
+  },
+  "Trongsa Dzong": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/TrongsaDzong.jpg/1280px-TrongsaDzong.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/TrongsaDzong.jpg/330px-TrongsaDzong.jpg",
+    "page": "https://en.wikipedia.org/wiki/Trongsa_Dzong",
+    "description": "Fortress in Trongsa, Bhutan",
+    "extract": "Trongsa Dzong is the largest dzong fortress in Bhutan, located in Trongsa in Trongsa district, in the centre of the country. Built on a spur overlooking the gorge of the Mangde River, a temple was first established at the location in 1543 by the Drukpa lama, Nagi Wangchuk son of Ngawang Chhojey. In 1647, his great-grandson Shabdrung Ngawang Namgyal, constructed the first dzong to replace it, called Chökhor Rabtentse Dzong with a shorter version of Choetse Dzong. It was enlarged several times during the 18th century; the Chenrezig Lhakang was built in 1715 and a whole complex, including the Maitreya (Jampa) temple, was added in 1771. The dzong has since been repaired on several occasions; it was damaged during the 1897 Assam earthquake and underwent extensive renovation in 1927 and 1999."
+  },
+  "Kurje Lhakhang": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Kurje-Lhakhang_2011-11-28.jpg/1280px-Kurje-Lhakhang_2011-11-28.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Kurje-Lhakhang_2011-11-28.jpg/330px-Kurje-Lhakhang_2011-11-28.jpg",
+    "page": "https://en.wikipedia.org/wiki/Kurjey_Lhakhang",
+    "description": "Buddhist monastery in Bumthang, Bhutan",
+    "extract": "Kurjey Lhakhang,སྐུ་རྗེས་ ཡང་ན་ གུ་རུ་རིན་པོ་ཆེ་གི་ ཞབས་རྗེས་ also known as the Kurjey Monastery, is located in the Bumthang valley in the Bumthang district of Bhutan. This is the final resting place of the remains of the first three Kings of Bhutan. Also, a large tree behind one of the temple buildings is believed to be a terma that was left there by Padmasambhava."
+  },
+  "Jambay Lhakhang": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Around_Jakar%2C_Jambay_Lhakhang_%2815845859155%29.jpg/1280px-Around_Jakar%2C_Jambay_Lhakhang_%2815845859155%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Around_Jakar%2C_Jambay_Lhakhang_%2815845859155%29.jpg/330px-Around_Jakar%2C_Jambay_Lhakhang_%2815845859155%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Jampa_Lhakhang",
+    "description": "Buddhist Temple in Bumthang, Bhutan",
+    "extract": "The Jampa Temple or Temple of Maitreya is located in Bumthang (Jakar) in Bhutan, and is said to be one of the 108 temples built by Tibetan King Songtsen Gampo in 659 CE on a single day, to pin down an ogress to earth forever."
+  },
+  "Gangteng Monastery": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Gangteng_monastery_2019-08-23_b.jpg/1280px-Gangteng_monastery_2019-08-23_b.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Gangteng_monastery_2019-08-23_b.jpg/330px-Gangteng_monastery_2019-08-23_b.jpg",
+    "page": "https://en.wikipedia.org/wiki/Gangteng_Monastery",
+    "description": "Buddhist monastery in Bhutan",
+    "extract": "Gangteng Monastery, also known as Gangtey Gonpa or Gangtey Monastery, is a monastery of Nyingmapa school of Tibetan Buddhism, the main seat of the Pema Lingpa tradition, located in the Wangdue Phodrang District in central Bhutan. The monastery, also known by the Gangtey village that surrounds it, is in the Phobjikha Valley where the black-necked cranes visit in winters to roost. The black-necked cranes circle the monastery three times on arrival and repeat when returning to Tibet. The monastery's history traces to the early 17th century and back to the prophecies made by the terton Pema Lingpa in the late 15th century."
+  },
+  "Rinpung Dzong": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Rinpung_Dzong%2C_Bhutan_01.jpg/1280px-Rinpung_Dzong%2C_Bhutan_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Rinpung_Dzong%2C_Bhutan_01.jpg/330px-Rinpung_Dzong%2C_Bhutan_01.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rinpung_Dzong",
+    "description": "Fortress in Paro, Bhutan",
+    "extract": "Rinpung Dzong, sometimes referred to as Paro Dzong, is a large dzong - Buddhist monastery and fortress - of the Drukpa Lineage of the Kagyu school in Paro District, Bhutan. It houses the district Monastic Body as well as government administrative offices of Paro Dzongkhag. It is listed as a tentative site in Bhutan's Tentative List for UNESCO inclusion."
+  },
+  "National Museum of Bhutan": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/National_Museum_of_Bhutan_01.jpg/1280px-National_Museum_of_Bhutan_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/National_Museum_of_Bhutan_01.jpg/330px-National_Museum_of_Bhutan_01.jpg",
+    "page": "https://en.wikipedia.org/wiki/National_Museum_of_Bhutan",
+    "description": "Museum in Paro, Bhutan",
+    "extract": "National Museum of Bhutan is a cultural museum in the town of Paro in western Bhutan."
+  },
+  "Ubud Monkey Forest": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Monkey_Forest.jpg/1280px-Monkey_Forest.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Monkey_Forest.jpg/330px-Monkey_Forest.jpg",
+    "page": "https://en.wikipedia.org/wiki/Ubud_Monkey_Forest",
+    "description": "Forest reserve in Bali, Indonesia",
+    "extract": "Mandala Suci Wenara Wana, also known as Ubud Monkey Forest, is a sanctuary located in Padangtegal, Ubud, Bali, Indonesia. As of 2023, about 1,260 Balinese long-tailed macaque monkeys lived in the Ubud Monkey Forest."
+  },
+  "Waigeo": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/Karta_ID_RajaAmpat_Isl.PNG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Karta_ID_RajaAmpat_Isl.PNG/330px-Karta_ID_RajaAmpat_Isl.PNG",
+    "page": "https://en.wikipedia.org/wiki/Waigeo",
+    "description": "Island in Indonesia",
+    "extract": "Waigeo is an island in the Southwest Papua province of eastern Indonesia. The island is also known as Amberi or Waigiu. It is the largest of the four main islands in the Raja Ampat Islands archipelago, between Halmahera and New Guinea, and about 65 kilometres from the northwest coast of the latter. The Dampier Strait separates it from Batanta, and the Bougainville Strait from the Kawe islands to its northwest. The \"inner sea\" that nearly cleaves the island in two is Mayalibit Bay, also known as the Majoli Gulf."
+  },
+  "Churchill Island": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Churchill_Island_%2811849539513%29.jpg/1280px-Churchill_Island_%2811849539513%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Churchill_Island_%2811849539513%29.jpg/330px-Churchill_Island_%2811849539513%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Churchill_Island",
+    "description": "Island in Victoria, Australia",
+    "extract": "Churchill Island is a 50.7-hectare (125.3-acre) island in Western Port, Victoria, Australia. The island is named after John Churchill, Esquire of Dawlish. The island is linked to Phillip Island by a bridge, with Phillip Island itself connected to the mainland via another bridge. Notably, Churchill Island was the site of Victoria’s first European garden and wheat crop. The island plays an important role in the history of Victoria and features a working farm, fully restored cottages from the 1860s, and a homestead dating back to 1872, all accessible to visitors. Adjacent to the 670-hectare (1,656-acre) Churchill Island Marine National Park the island is managed by Phillip Island Nature Parks and is listed on the Victorian heritage register."
+  },
+  "Little penguin": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Eudyptula_minor_Bruny_1.jpg/1280px-Eudyptula_minor_Bruny_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Eudyptula_minor_Bruny_1.jpg/330px-Eudyptula_minor_Bruny_1.jpg",
+    "page": "https://en.wikipedia.org/wiki/Little_penguin",
+    "description": "Species of penguin",
+    "extract": "The little penguin is the smallest species of penguin in the world, and originates from New Zealand and Australia. It is commonly known as the fairy penguin, little blue penguin, or blue penguin, owing to its slate-blue plumage, and is also known by its Māori name kororā. It is a marine neritic species that dives for food throughout the day and returns to burrows on the shore at dusk. Eudyptula minor feathers are dense in melanosomes, which increase water resistance and give them their unique blue colour."
+  },
+  "Arthur's Pass": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/NZ_arthurs_pass_SI.jpg/1280px-NZ_arthurs_pass_SI.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/NZ_arthurs_pass_SI.jpg/330px-NZ_arthurs_pass_SI.jpg",
+    "page": "https://en.wikipedia.org/wiki/Arthur's_Pass",
+    "description": "Settlement in Canterbury, New Zealand",
+    "extract": "Arthur's Pass, previously called Camping Flat then Bealey Flats, and for some time officially Arthur Pass, is a township in the Southern Alps of the South Island of New Zealand, located in the Selwyn district. It is a popular base for exploring Arthur's Pass National Park."
+  },
+  "Hokitika Gorge": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/TWC_Hokitika_Gorge_%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_10.jpg/1280px-TWC_Hokitika_Gorge_%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_10.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/TWC_Hokitika_Gorge_%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_10.jpg/330px-TWC_Hokitika_Gorge_%E2%80%A2_Stewart_Nimmo_%E2%80%A2_MRD_10.jpg",
+    "page": "https://en.wikipedia.org/wiki/Hokitika_Gorge",
+    "description": "Gorge in New Zealand",
+    "extract": "Hokitika Gorge and the surrounding Hokitika Gorge Scenic Reserve are a major tourist destination some 33 kilometres (21 mi) or 40 minutes drive inland from Hokitika, New Zealand. Since August 2020, a second suspension bridge over the Hokitika River at the gorge provides the opportunity for a round track."
+  },
+  "Lake Matheson": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Lake_Matheson_reflection_of_Mount_Tasman_and_Aoraki_Mount_Cook.jpg/1280px-Lake_Matheson_reflection_of_Mount_Tasman_and_Aoraki_Mount_Cook.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Lake_Matheson_reflection_of_Mount_Tasman_and_Aoraki_Mount_Cook.jpg/330px-Lake_Matheson_reflection_of_Mount_Tasman_and_Aoraki_Mount_Cook.jpg",
+    "page": "https://en.wikipedia.org/wiki/Lake_Matheson",
+    "description": "Lake in New Zealand",
+    "extract": "Lake Matheson is a small glacial lake in South Westland, New Zealand, near the township of Fox Glacier. It was a traditional food-gathering place for local Māori. An easy walking track circles the lake, which is famous for its reflected views of Aoraki / Mount Cook and Mount Tasman."
+  },
+  "Haast Pass": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Haast_Pass_-_vyhl%C3%ADdka_-_panoramio.jpg/1280px-Haast_Pass_-_vyhl%C3%ADdka_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Haast_Pass_-_vyhl%C3%ADdka_-_panoramio.jpg/330px-Haast_Pass_-_vyhl%C3%ADdka_-_panoramio.jpg",
+    "page": "https://en.wikipedia.org/wiki/Haast_Pass",
+    "description": "Mountain pass in New Zealand",
+    "extract": "Haast Pass / Tioripatea is a mountain pass in the Southern Alps of the South Island of New Zealand. Māori used the pass in pre-European times."
+  },
+  "Lake Wānaka": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/LakeWanakaNov272024.jpg/1280px-LakeWanakaNov272024.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/LakeWanakaNov272024.jpg/330px-LakeWanakaNov272024.jpg",
+    "page": "https://en.wikipedia.org/wiki/Lake_W%C4%81naka",
+    "description": "Lake in Otago, New Zealand",
+    "extract": "Lake Wānaka is New Zealand's fourth-largest lake and the seat of the town of Wānaka in the Otago region. The lake is 300 meters above sea level, covers about 198 km2 (76 sq mi), and is more than 300 m (980 ft) deep."
+  },
+  "Rob Roy Glacier": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Rob_Roy_Glacier_from_far_below_in_valley.jpg/1280px-Rob_Roy_Glacier_from_far_below_in_valley.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Rob_Roy_Glacier_from_far_below_in_valley.jpg/330px-Rob_Roy_Glacier_from_far_below_in_valley.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rob_Roy_Glacier",
+    "description": "Small glacier in New Zealand",
+    "extract": "The Rob Roy Glacier is a small hanging glacier in the Southern Alps of New Zealand's South Island. It is located within the Mount Aspiring National Park, 9 kilometres (6 mi) south of Mount Aspiring / Tititea."
+  },
+  "Mount Aspiring National Park": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Matukituki_valley.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Matukituki_valley.jpg/330px-Matukituki_valley.jpg",
+    "page": "https://en.wikipedia.org/wiki/Mount_Aspiring_National_Park",
+    "description": "National park in New Zealand",
+    "extract": "Mount Aspiring National Park is in the Southern Alps of the South Island of New Zealand, north of Fiordland National Park, situated in Otago and Westland regions. The park forms part of the Te Wahipounamu World Heritage Site."
+  },
+  "Mou Waho": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Mou_Waho_Islandception.jpg/1280px-Mou_Waho_Islandception.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Mou_Waho_Islandception.jpg/330px-Mou_Waho_Islandception.jpg",
+    "page": "https://en.wikipedia.org/wiki/Mou_Waho",
+    "description": "Island in Lake Wānaka",
+    "extract": "Mou Waho is a 120-hectare island in Lake Wānaka, New Zealand.\nIt is around the same size as the nearby Mou Tapu, these two islands being the largest in the lake. The island contains a small recursive lake, called Arethusa Pool: a glacial-scoured lake formed by the most recent ice age on an island, in a lake on an island."
+  },
+  "Shotover River": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Shotover_Jet%2C_Jet_Boating_the_Shotover_River_Canyons%2C_Queenstown%2C_New_Zealand.jpg/1280px-Shotover_Jet%2C_Jet_Boating_the_Shotover_River_Canyons%2C_Queenstown%2C_New_Zealand.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Shotover_Jet%2C_Jet_Boating_the_Shotover_River_Canyons%2C_Queenstown%2C_New_Zealand.jpg/330px-Shotover_Jet%2C_Jet_Boating_the_Shotover_River_Canyons%2C_Queenstown%2C_New_Zealand.jpg",
+    "page": "https://en.wikipedia.org/wiki/Shotover_River",
+    "description": "River in New Zealand",
+    "extract": "The Shotover River is located in the Otago region of the South Island of New Zealand. The name correctly suggests that this 75-kilometre (47 mi) long river is fast flowing, with numerous rapids.\nThe river flows generally south from the Southern Alps on its journey running through the Skippers Canyon, draining the area between the Richardson Mountains and the Harris Mountains, before flowing into the Kawarau River east of Queenstown."
+  },
+  "Milford Sound": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_%28New_Zealand%29.JPG/1280px-Milford_Sound_%28New_Zealand%29.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_%28New_Zealand%29.JPG/330px-Milford_Sound_%28New_Zealand%29.JPG",
+    "page": "https://en.wikipedia.org/wiki/Milford_Sound",
+    "description": "Fiord in the southwest of New Zealand's South Island",
+    "extract": "Milford Sound is a fiord in the south west of New Zealand's South Island within Fiordland National Park, Piopiotahi Marine Reserve, and the Te Wahipounamu World Heritage site. It has been judged the world's top travel destination in an international survey and is acclaimed as New Zealand's most famous tourist destination. Rudyard Kipling called it the eighth Wonder of the World. The fiord is most commonly accessed via road by tour coach, with the road terminating at a small village also called Milford Sound."
+  },
+  "Lake Wakatipu": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/LakeWakatipuNov172024_02.jpg/1280px-LakeWakatipuNov172024_02.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/LakeWakatipuNov172024_02.jpg/330px-LakeWakatipuNov172024_02.jpg",
+    "page": "https://en.wikipedia.org/wiki/Lake_Wakatipu",
+    "description": "Lake in the South Island of New Zealand",
+    "extract": "Lake Wakatipu is an inland lake in the South Island of New Zealand. It is in the southwest corner of the Otago region, near its boundary with Southland. The name Wakatipu comes from the Māori name of the lake; there are two different etymologies as to the origin of the name."
+  },
+  "Lindis Pass": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/20250221-DJI_0950.jpg/1280px-20250221-DJI_0950.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/20250221-DJI_0950.jpg/330px-20250221-DJI_0950.jpg",
+    "page": "https://en.wikipedia.org/wiki/Lindis_Pass",
+    "description": "Mountain pass in the South Island of New Zealand",
+    "extract": "The Lindis Pass is located in the South Island of New Zealand."
+  },
+  "Hooker Valley Track": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Stocking_Stream_Shelter_in_Hooker_Valley_in_front_of_Aoraki_Mount_Cook_Range.jpg/1280px-Stocking_Stream_Shelter_in_Hooker_Valley_in_front_of_Aoraki_Mount_Cook_Range.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Stocking_Stream_Shelter_in_Hooker_Valley_in_front_of_Aoraki_Mount_Cook_Range.jpg/330px-Stocking_Stream_Shelter_in_Hooker_Valley_in_front_of_Aoraki_Mount_Cook_Range.jpg",
+    "page": "https://en.wikipedia.org/wiki/Hooker_Valley_Track",
+    "description": "Walking path in the Canterbury Region, New Zealand",
+    "extract": "The Hooker Valley Track is the most popular short walking track within the Aoraki / Mount Cook National Park in New Zealand. At only 5 kilometres (3.1 mi) length and gaining only about 100 m (330 ft) in height, the well formed track can be walked by tourists with a wide range of level of fitness."
+  },
+  "Lake Pukaki": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/LakePukakiNov232024_01.jpg/1280px-LakePukakiNov232024_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/LakePukakiNov232024_01.jpg/330px-LakePukakiNov232024_01.jpg",
+    "page": "https://en.wikipedia.org/wiki/Lake_Pukaki",
+    "description": "Lake in Canterbury Region, New Zealand",
+    "extract": "Lake Pukaki is the largest of three roughly parallel alpine lakes running north–south along the northern edge of the Mackenzie Basin on New Zealand's South Island. The others are Lakes Tekapo and Ōhau. All three lakes were formed when the terminal moraines of receding glaciers blocked their respective valleys, forming moraine-dammed lakes. The Alps2Ocean mountain bike trail follows the edge of Lake Pukaki for part of its length."
+  },
+  "Hoa Lư Ancient Capital": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Codohoalu2010k5.jpg/1280px-Codohoalu2010k5.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Codohoalu2010k5.jpg/330px-Codohoalu2010k5.jpg",
+    "page": "https://en.wikipedia.org/wiki/Hoa_L%C6%B0_Ancient_Capital",
+    "description": "Provincial city and historical capital of Vietnam",
+    "extract": "Hoa Lư was the capital of Vietnam from 968 to 1010. It lies in Trường Yên Thượng village, Hoa Lư, Ninh Bình Province. The area is one of ricefields broken by limestone mountains, and is approximately 90 km south of Hanoi. Together with Phát Diệm Cathedral, Tam Cốc-Bích Động, Bái Đính Temple, Tràng An, and Cúc Phương, Hoa Lư is a tourist destinations in Ninh Bình Province."
+  },
+  "Omarama Clay Cliffs": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Clay_Cliffs_in_early_morning_light.jpg/1280px-Clay_Cliffs_in_early_morning_light.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Clay_Cliffs_in_early_morning_light.jpg/330px-Clay_Cliffs_in_early_morning_light.jpg",
+    "page": "https://en.wikipedia.org/wiki/Omarama_Clay_Cliffs",
+    "description": "Tourist attraction in New Zealand",
+    "extract": "The Omarama Clay Cliffs, also known as the Ahuriri River Clay Cliffs and the Clay Cliffs Paritea are a group of cliffs in southern New Zealand. They are located close to the north bank of the Ahuriri River, some 10 km to the west of the township of Omarama."
   }
 }

@@ -3,7 +3,11 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const src = readFileSync(new URL("../src/data/itinerary.ts", import.meta.url), "utf8");
-const titles = [...new Set([...src.matchAll(/(?:wiki|photoWiki):\s*"([^"]+)"/g)].map((m) => m[1]))];
+const titles = new Set([...src.matchAll(/(?:wiki|photoWiki):\s*"([^"]+)"/g)].map((m) => m[1]));
+// Places tagged on day items: b("text", "Place", ...) or p("text", "Place", ...)
+for (const m of src.matchAll(/\b[bp]\("(?:[^"\\]|\\.)*"((?:\s*,\s*"[^"]*")+)\s*\)/g)) {
+  for (const t of m[1].matchAll(/"([^"]+)"/g)) titles.add(t[1]);
+}
 
 const UA = "trip-to-asia-md site build (personal family site)";
 let out = {};
@@ -13,7 +17,7 @@ try {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 for (const title of titles) {
-  if (out[title]?.src) continue;
+  if (out[title]?.src && out[title]?.thumb) continue;
   await sleep(600);
   const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, "_"))}`;
   try {
@@ -33,6 +37,7 @@ for (const title of titles) {
     else if (orig?.source) src = orig.source.split("?")[0];
     out[title] = {
       src,
+      thumb: thumb ? thumb.split("?")[0] : src,
       page: j.content_urls?.desktop?.page ?? `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`,
       description: j.description ?? "",
       extract: j.extract ?? "",

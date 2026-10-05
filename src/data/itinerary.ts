@@ -21,22 +21,29 @@ export type Stop = {
   ideas?: string[]; // "could do" list from the doc
 };
 
-export type PlanItem = string | { text: string; booked: true };
+export type PlanItem = string | { text: string; booked?: true; places?: string[] };
 
 export type DayPlan = {
   date: string; // YYYY-MM-DD, local to wherever they are that day
   items: PlanItem[];
 };
 
-/** Marks a plan item as booked / confirmed (red in the planning doc). */
-export const b = (text: string): PlanItem => ({ text, booked: true });
+/** Marks a plan item as booked / confirmed (red in the planning doc). `places` are Wikipedia titles. */
+export const b = (text: string, ...places: string[]): PlanItem => ({ text, booked: true, ...(places.length ? { places } : {}) });
+
+/** A plan item with one or more places (Wikipedia titles) to show as photo tiles. */
+export const p = (text: string, ...places: string[]): PlanItem => ({ text, places });
 
 export function itemText(item: PlanItem): string {
   return typeof item === "string" ? item : item.text;
 }
 
 export function isBooked(item: PlanItem): boolean {
-  return typeof item !== "string" && item.booked;
+  return typeof item !== "string" && item.booked === true;
+}
+
+export function itemPlaces(item: PlanItem): string[] {
+  return typeof item === "string" ? [] : (item.places ?? []);
 }
 
 export const TRAVELERS = "M&D";
@@ -528,7 +535,7 @@ export const stops: Stop[] = [
     lodgingQuery: "Alps Motel Twizel",
     wiki: "Aoraki / Mount Cook",
     blurb: "Mackenzie Country: turquoise lakes under New Zealand's highest mountain.",
-    ideas: ["Route 6 to 8 via Lindis Pass (2.5 h)", "Clay Cliffs", "Hooker Valley Track", "Mt Cook"],
+    ideas: ["Route 6 to 8 via Lindis Pass (2.5 h)", "Omarama Clay Cliffs", "Hooker Valley Track", "Mt Cook"],
   },
   {
     id: "chc",
@@ -577,25 +584,25 @@ export const days: DayPlan[] = [
   { date: "2026-10-06", items: ["Arrive Ho Chi Minh City 4:30 AM", "Grand Hotel Du Lac Boutique Saigon"] },
   { date: "2026-10-07", items: ["Ho Chi Minh City"] },
   { date: "2026-10-08", items: [b("Fly to Hanoi 10:00 AM to 12:10 PM, Vietnam Airlines VN210 from Tan Son Nhat"), "May de Ville Lakeside"] },
-  { date: "2026-10-09", items: ["Hanoi", b("Dinner at Tầm Vị, 6 PM (Michelin star)")] },
+  { date: "2026-10-09", items: [p("Hanoi", "Hoàn Kiếm Lake", "Old Quarter, Hanoi"), b("Dinner at Tầm Vị, 6 PM (Michelin star)")] },
   { date: "2026-10-10", items: [b("Peony Cruise picks up at the hotel 8 to 8:30 AM"), "Board in Lan Ha Bay"] },
-  { date: "2026-10-11", items: ["On the cruise in Lan Ha Bay"] },
+  { date: "2026-10-11", items: [p("On the cruise in Lan Ha Bay", "Hạ Long Bay", "Cát Bà Island")] },
   { date: "2026-10-12", items: ["Cruise ends 11:30 AM", b("Driver at noon to Ninh Binh, about 4 h, arrive around 4 PM"), "Tam Coc Garden Resort"] },
-  { date: "2026-10-13", items: ["Tam Coc / Ninh Binh"] },
-  { date: "2026-10-14", items: ["Tam Coc / Ninh Binh"] },
+  { date: "2026-10-13", items: [p("Tam Coc / Ninh Binh", "Tràng An Scenic Landscape Complex", "Tam Cốc-Bích Động")] },
+  { date: "2026-10-14", items: [p("Tam Coc / Ninh Binh", "Bái Đính Temple", "Hoa Lư Ancient Capital")] },
   { date: "2026-10-15", items: ["Transfer to Pu Luong", "Pu Luong Eco Garden"] },
   { date: "2026-10-16", items: ["Pu Luong"] },
   { date: "2026-10-17", items: ["1:15 PM bus to Hanoi", "Splendid Secret Hotel"] },
-  { date: "2026-10-18", items: ["Hanoi", "Dinner out"] },
+  { date: "2026-10-18", items: [p("Hanoi", "Temple of Literature, Hanoi", "Trấn Quốc Pagoda"), "Dinner out"] },
   { date: "2026-10-19", items: [b("Fly to Bangkok 8:50 to 10:50 AM, Vietnam Airlines VN611"), "Salil Hotel Riverside"] },
-  { date: "2026-10-20", items: ["Bangkok", b("Tuk-tuk food tour, 4:30 PM pickup at the hotel")] },
-  { date: "2026-10-21", items: [b("Fly to Paro, Bhutan 1:10 to 3:25 PM, Druk Air KB151 (3¼ h)"), "Drive about 1.5 h to Thimphu", "Hotel Changangkha"] },
+  { date: "2026-10-20", items: [p("Bangkok", "Wat Arun", "Chao Phraya River"), b("Tuk-tuk food tour, 4:30 PM pickup at the hotel")] },
+  { date: "2026-10-21", items: [b("Fly to Paro, Bhutan 1:10 to 3:25 PM, Druk Air KB151 (3¼ h)", "Paro Airport"), "Drive about 1.5 h to Thimphu", "Hotel Changangkha"] },
   {
     date: "2026-10-22",
     items: [
-      "Tango Monastery hike, about 2.5 h round trip",
-      "Buddha Dordenma",
-      "Takin Preserve",
+      p("Tango Monastery hike, about 2.5 h round trip", "Tango Monastery"),
+      p("Buddha Dordenma statue", "Buddha Dordenma"),
+      p("Takin Preserve", "Motithang Takin Preserve"),
       "Wangditse nature hike",
       "Paper factory",
       "Centenary Farmers' Market",
@@ -604,18 +611,18 @@ export const days: DayPlan[] = [
   },
   {
     date: "2026-10-23",
-    items: ["Drive to Punakha, about 2 to 2.5 h, over Dochula Pass", "Chimi Lhakhang, Punakha Dzong, the suspension bridge", "Punatshangchu Cottage"],
+    items: [p("Drive to Punakha, about 2 to 2.5 h, over Dochula Pass", "Dochula Pass"), p("Chimi Lhakhang, Punakha Dzong, the suspension bridge", "Chimi Lhakhang", "Punakha Dzong"), "Punatshangchu Cottage"],
   },
-  { date: "2026-10-24", items: ["Punakha Valley: Khamsum Yulley Namgyal Chorten hike, nunnery, village walk"] },
-  { date: "2026-10-25", items: ["Drive to Bumthang via Trongsa, about 6 h", "Pelela Pass, Chendebji Chorten, Trongsa Dzong", "Jakar Village Lodge"] },
-  { date: "2026-10-26", items: ["Jakar", "Kurjey Lhakhang", "Jambay Lhakhang Drup festival"] },
-  { date: "2026-10-27", items: ["Drive to Gangtey, 5 to 6 h", "Gangtey Monastery and nature trail", "Namgayling Cottage, Phobjikha"] },
-  { date: "2026-10-28", items: ["Drive to Paro, about 5 h", "Rinchengang village, National Museum, Rinpung Dzong", "Gonju Boutique, Paro"] },
-  { date: "2026-10-29", items: ["Hike to Tiger's Nest (Paro Taktsang), 5 to 6 h round trip", "Hot stone bath and farmhouse dinner", "Stay in Paro"] },
+  { date: "2026-10-24", items: [p("Punakha Valley: Khamsum Yulley Namgyal Chorten hike, nunnery, village walk", "Khamsum Yulley Namgyal Chorten")] },
+  { date: "2026-10-25", items: ["Drive to Bumthang via Trongsa, about 6 h", p("Pelela Pass, Chendebji Chorten, Trongsa Dzong", "Pele La", "Trongsa Dzong"), "Jakar Village Lodge"] },
+  { date: "2026-10-26", items: ["Jakar", p("Kurjey Lhakhang", "Kurje Lhakhang"), p("Jambay Lhakhang Drup festival", "Jambay Lhakhang")] },
+  { date: "2026-10-27", items: ["Drive to Gangtey, 5 to 6 h", p("Gangtey Monastery and nature trail", "Gangteng Monastery", "Phobjikha Valley"), "Namgayling Cottage, Phobjikha"] },
+  { date: "2026-10-28", items: ["Drive to Paro, about 5 h", p("Rinchengang village, National Museum, Rinpung Dzong", "Rinpung Dzong", "National Museum of Bhutan"), "Gonju Boutique, Paro"] },
+  { date: "2026-10-29", items: [p("Hike to Tiger's Nest (Paro Taktsang), 5 to 6 h round trip", "Paro Taktsang"), "Hot stone bath and farmhouse dinner", "Stay in Paro"] },
   { date: "2026-10-30", items: [b("Fly back to Bangkok 8:00 AM to 12:10 PM, Druk Air KB150 (3 h)"), "Chatrium Hotel Riverside"] },
   { date: "2026-10-31", items: ["Bangkok"] },
   { date: "2026-11-01", items: [b("Fly to Bali 8:50 AM to 2:15 PM, Thai Airways TG431 (4½ h)"), "Sumitra Luxury Villas, Sanur"] },
-  { date: "2026-11-02", items: ["Ubud Monkey Forest"] },
+  { date: "2026-11-02", items: [p("Ubud Monkey Forest", "Ubud Monkey Forest")] },
   { date: "2026-11-03", items: ["Sanur, Bali"] },
   { date: "2026-11-04", items: ["Sanur, Bali"] },
   {
@@ -627,7 +634,7 @@ export const days: DayPlan[] = [
     ],
   },
   { date: "2026-11-06", items: ["Speedboat direct to Yenatar Resort, Raja Ampat", "Possible stop at Kali Biru, the Blue River"] },
-  { date: "2026-11-07", items: ["Raja Ampat"] },
+  { date: "2026-11-07", items: [p("Raja Ampat", "Raja Ampat Islands", "Waigeo")] },
   { date: "2026-11-08", items: ["Raja Ampat"] },
   { date: "2026-11-09", items: ["Raja Ampat"] },
   { date: "2026-11-10", items: ["Raja Ampat"] },
@@ -649,8 +656,8 @@ export const days: DayPlan[] = [
     date: "2026-11-18",
     items: [
       "Drive to Phillip Island, about 1¼ h",
-      b("Koala Reserve and Churchill Island"),
-      b("Penguin Parade 7:30 PM, guided tour 7:45 PM"),
+      b("Koala Reserve and Churchill Island", "Churchill Island"),
+      b("Penguin Parade 7:30 PM, guided tour 7:45 PM", "Little penguin"),
       "Stay Ramada Phillip Island",
     ],
   },
@@ -661,33 +668,33 @@ export const days: DayPlan[] = [
       "Drop the car at Melbourne Airport",
       b("Fly Melbourne to Christchurch 9:10 AM to 2:20 PM, Qantas QF167 (3½ h)"),
       b("Pick up the Apex rental car"),
-      "Castle Hill rocks, about 45 min of walking",
+      p("Castle Hill rocks, about 45 min of walking", "Castle Hill, New Zealand"),
       "Drive about 1.2 h to Grasmere",
     ],
   },
   {
     date: "2026-11-21",
     items: [
-      "Drive 30 min to Arthur's Pass: Devil's Punchbowl, 1 h easy hike",
-      "Drive about 2 h to Pancake Rocks, Punakaiki",
+      p("Drive 30 min to Arthur's Pass: Devil's Punchbowl, 1 h easy hike", "Arthur's Pass"),
+      p("Drive about 2 h to Pancake Rocks, Punakaiki", "Punakaiki"),
       "Truman Track tide pools if the tide is low",
       "Stay Paroa Hotel, Greymouth (45 min)",
     ],
   },
   {
     date: "2026-11-22",
-    items: ["Hokitika, 25 min", "Hokitika Gorge suspension bridge", "Drive 2¼ h south", "Franz Josef Glacier, 30 min walk", "Stay Rainforest Retreat"],
+    items: ["Hokitika, 25 min", p("Hokitika Gorge suspension bridge", "Hokitika Gorge"), "Drive 2¼ h south", p("Franz Josef Glacier, 30 min walk", "Franz Josef Glacier"), "Stay Rainforest Retreat"],
   },
-  { date: "2026-11-23", items: ["30 min to Fox Glacier", "Lake Matheson walk, 1½ h", "Minnehaha glow-worm walk at night", "Stay Mt Cook View Motel"] },
-  { date: "2026-11-24", items: ["Drive to Wānaka, 3½ h, stop at the Blue Pools", "Wine tour", "Stay Apartments on Helwick"] },
-  { date: "2026-11-25", items: [b("Rob Roy Glacier guided walk, 9 AM (Viator)")] },
-  { date: "2026-11-26", items: ["Water taxi to Mou Waho island"] },
-  { date: "2026-11-27", items: ["Drive to Queenstown, 1 h", b("Shotover Jet 3:30 PM, check in by 3:00"), "Stay Wynter Apartments"] },
-  { date: "2026-11-28", items: [b("Milford Sound day tour with Luxe Tours, 7:15 AM pickup, plane fly-back")] },
-  { date: "2026-11-29", items: ["Queenstown"] },
+  { date: "2026-11-23", items: [p("30 min to Fox Glacier", "Fox Glacier"), p("Lake Matheson walk, 1½ h", "Lake Matheson"), "Minnehaha glow-worm walk at night", "Stay Mt Cook View Motel"] },
+  { date: "2026-11-24", items: [p("Drive to Wānaka, 3½ h, stop at the Blue Pools", "Haast Pass", "Lake Wānaka"), "Wine tour", "Stay Apartments on Helwick"] },
+  { date: "2026-11-25", items: [b("Rob Roy Glacier guided walk, 9 AM (Viator)", "Rob Roy Glacier", "Mount Aspiring National Park")] },
+  { date: "2026-11-26", items: [p("Water taxi to Mou Waho island", "Mou Waho")] },
+  { date: "2026-11-27", items: ["Drive to Queenstown, 1 h", b("Shotover Jet 3:30 PM, check in by 3:00", "Shotover River"), "Stay Wynter Apartments"] },
+  { date: "2026-11-28", items: [b("Milford Sound day tour with Luxe Tours, 7:15 AM pickup, plane fly-back", "Milford Sound")] },
+  { date: "2026-11-29", items: [p("Queenstown", "Lake Wakatipu")] },
   { date: "2026-11-30", items: ["Queenstown", b("Dinner at The Nest, 6 PM")] },
-  { date: "2026-12-01", items: ["Drive 2½ h to Twizel via Lindis Pass", "Clay Cliffs on the way", "Stay Alps Motel"] },
-  { date: "2026-12-02", items: ["Aoraki / Mt Cook", "Hooker Valley Track"] },
+  { date: "2026-12-01", items: [p("Drive 2½ h to Twizel via Lindis Pass", "Lindis Pass"), p("Clay Cliffs on the way", "Omarama Clay Cliffs"), "Stay Alps Motel"] },
+  { date: "2026-12-02", items: [p("Aoraki / Mt Cook", "Aoraki / Mount Cook"), p("Hooker Valley Track", "Hooker Valley Track", "Lake Pukaki")] },
   { date: "2026-12-03", items: ["Drive 3½ h to Christchurch", b("Return the car by 3:30 PM"), "Stay Novotel Christchurch Airport"] },
   { date: "2026-12-04", items: [b("Fly Christchurch to Auckland 9:40 to 11:05 AM, Air New Zealand"), "Stay M Social Auckland"] },
   { date: "2026-12-05", items: [b("Fly Auckland to JFK, Air New Zealand, leave 7:15 PM, land 5:00 PM the same day New York time")] },

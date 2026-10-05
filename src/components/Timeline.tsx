@@ -1,7 +1,8 @@
 "use client";
 
 import { Photo, photoFor } from "@/components/Photo";
-import { isBooked, itemText } from "@/data/itinerary";
+import { isBooked, itemPlaces, itemText } from "@/data/itinerary";
+import { PlaceTiles } from "@/components/PlaceTiles";
 import { fmtDate, fmtDateString, fmtTime, partsInTz } from "@/lib/time";
 import { mapsUrl, stopsWithTimes, type StopWithTimes } from "@/lib/trip";
 import { daysBetween } from "@/lib/time";
@@ -96,25 +97,28 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
                   {bookedCount ? `, ${bookedCount} booked ✓` : ""})
                 </span>
               </summary>
-              <ul className="mt-2 space-y-2">
+              <ol className="mt-1 divide-y divide-stone-100 dark:divide-stone-800">
                 {stop.plans.map((d) => (
-                  <li key={d.date} className="grid grid-cols-[88px_1fr] gap-2 text-sm">
+                  <li key={d.date} className="grid gap-2 py-3 text-sm sm:grid-cols-[88px_1fr]">
                     <span className="font-medium text-stone-700 dark:text-stone-300">{fmtDateString(d.date)}</span>
-                    <ul className="space-y-1">
-                      {d.items.map((item) => (
-                        <li key={itemText(item)} className="flex gap-2 text-stone-600 dark:text-stone-400">
-                          {isBooked(item) ? (
-                            <span className="w-3 shrink-0 text-center text-emerald-600" title="Booked">✓</span>
-                          ) : (
-                            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 self-start rounded-full bg-amber-500" />
-                          )}
-                          <span className={isBooked(item) ? "text-stone-700 dark:text-stone-300" : ""}>{itemText(item)}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="min-w-0">
+                      <ul className="space-y-1">
+                        {d.items.map((item) => (
+                          <li key={itemText(item)} className="flex gap-2 text-stone-600 dark:text-stone-400">
+                            {isBooked(item) ? (
+                              <span className="w-3 shrink-0 text-center text-emerald-600" title="Booked">✓</span>
+                            ) : (
+                              <span className="mt-[7px] h-1.5 w-1.5 shrink-0 self-start rounded-full bg-amber-500" />
+                            )}
+                            <span className={isBooked(item) ? "text-stone-700 dark:text-stone-300" : ""}>{itemText(item)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <PlaceTiles titles={d.items.flatMap(itemPlaces)} className="mt-2" />
+                    </div>
                   </li>
                 ))}
-              </ul>
+              </ol>
             </details>
           )}
 

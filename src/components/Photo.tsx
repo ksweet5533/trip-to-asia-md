@@ -1,7 +1,7 @@
 import Image from "next/image";
 import images from "@/data/images.json";
 
-type Entry = { src: string | null; page: string; description: string; extract: string };
+type Entry = { src: string | null; thumb?: string | null; page: string; description: string; extract: string };
 const table = images as Record<string, Entry>;
 
 export function photoFor(wiki: string): Entry | undefined {

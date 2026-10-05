@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
-import { TRAVELERS, isBooked, itemText } from "@/data/itinerary";
+import { TRAVELERS, isBooked, itemPlaces, itemText } from "@/data/itinerary";
+import { PlaceTiles } from "@/components/PlaceTiles";
 import { flightTrackerUrl, flightradarUrl } from "@/data/flights";
 import { describeOffset, fmtDate, fmtDateString, fmtTime, tzAbbrev } from "@/lib/time";
 import { getStatus, mapsUrl, planFor, progressAt, stopsWithTimes, TOTAL_DAYS, tripDayNumber, type StopWithTimes, type TripStatus } from "@/lib/trip";
@@ -141,7 +142,7 @@ export default function TripTracker() {
           </section>
 
           <footer className="mt-12 text-xs leading-relaxed text-stone-500 dark:text-stone-500">
-            Photos from Wikipedia, credited on each stop. Map tiles © OpenStreetMap contributors, © CARTO. Flight tracking by FlightAware and Flightradar24. Times are taken from the itinerary and may shift; the day&rsquo;s plan shows what was written down, not live confirmation.
+            Photos from Wikipedia, credited on each stop. Map imagery © Esri, Maxar, Earthstar Geographics. Flight tracking by FlightAware and Flightradar24. Times are taken from the itinerary and may shift; the day&rsquo;s plan shows what was written down, not live confirmation.
           </footer>
         </>
       )}
@@ -254,6 +255,7 @@ function NowPanel({ now, status, viewerTz }: { now: number; status: TripStatus; 
               ) : (
                 <p className="mt-2 text-sm text-stone-500">Nothing written down for today. Probably a free day in {stop?.place}.</p>
               )}
+              <PlaceTiles titles={plan.flatMap(itemPlaces)} className="mt-3" />
             </div>
           )}
 
