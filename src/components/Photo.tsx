@@ -8,7 +8,7 @@ export function photoFor(wiki: string): Entry | undefined {
   return table[wiki];
 }
 
-export function Photo({ wiki, alt, className, credit }: { wiki: string; alt: string; className?: string; credit?: boolean }) {
+export function Photo({ wiki, alt, className, credit, creditClassName = "bottom-3 right-3" }: { wiki: string; alt: string; className?: string; credit?: boolean; creditClassName?: string }) {
   const entry = table[wiki];
   if (!entry?.src) {
     return <div className={`${className ?? ""} bg-gradient-to-br from-amber-100 to-stone-200 dark:from-stone-800 dark:to-stone-900`} aria-hidden />;
@@ -21,7 +21,7 @@ export function Photo({ wiki, alt, className, credit }: { wiki: string; alt: str
           href={entry.page}
           target="_blank"
           rel="noreferrer"
-          className="absolute bottom-3 right-3 rounded-full bg-black/50 px-2 py-0.5 text-[10px] text-white/90 backdrop-blur hover:bg-black/70"
+          className={`absolute ${creditClassName} rounded-full bg-black/50 px-2 py-0.5 text-[10px] text-white/90 backdrop-blur hover:bg-black/70`}
         >
           Photo: Wikipedia
         </a>

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { photoFor } from "@/components/Photo";
 import { customPlaces, placeIcon } from "@/data/places";
+import { mapsUrl } from "@/lib/trip";
+import type { Stop } from "@/data/itinerary";
 
 /** "Temple of Literature, Hanoi" -> "Temple of Literature"; keeps "Aoraki / Mount Cook". */
 function displayName(title: string): string {
@@ -32,12 +34,19 @@ function resolve(title: string): Tile | null {
   return e ? { key: title, name: displayName(title), url: e.page, text: firstSentences(e.extract || e.description), thumb: e.thumb } : null;
 }
 
-export function PlaceTiles({ titles, className = "" }: { titles: string[]; className?: string }) {
+export function hotelTile(stop: Stop): Tile | null {
+  if (!stop.lodging) return null;
+  return { key: `hotel-${stop.id}`, name: stop.lodging, url: mapsUrl(stop), text: stop.lodgingBlurb ?? `Where they stay in ${stop.place}.`, icon: stop.lodgingIcon ?? "🏨" };
+}
+
+export function PlaceTiles({ titles, hotel, className = "" }: { titles: string[]; hotel?: Stop; className?: string }) {
   const seen = new Set<string>();
   const tiles = titles
     .filter((t) => (seen.has(t) ? false : (seen.add(t), true)))
     .map(resolve)
     .filter((t): t is Tile => t !== null);
+  const h = hotel ? hotelTile(hotel) : null;
+  if (h) tiles.unshift(h);
   if (!tiles.length) return null;
   return (
     <ul className={`grid gap-2 sm:grid-cols-2 ${className}`}>

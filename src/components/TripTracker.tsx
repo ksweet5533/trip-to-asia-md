@@ -7,7 +7,7 @@ import { PlaceTiles } from "@/components/PlaceTiles";
 import { flightTrackerUrl, flightradarUrl } from "@/data/flights";
 import { daysBetween, describeOffset, fmtDate, fmtDateString, fmtTime, partsInTz, tzAbbrev } from "@/lib/time";
 import { getStatus, mapsUrl, planFor, progressAt, stopsWithTimes, TOTAL_DAYS, tripDayNumber, type StopWithTimes, type TripStatus } from "@/lib/trip";
-import { Timeline } from "@/components/Timeline";
+import { FLAGS, Timeline } from "@/components/Timeline";
 import { Photo } from "@/components/Photo";
 
 const TripMap = dynamic(() => import("@/components/TripMap"), {
@@ -260,7 +260,7 @@ function NowPanel({ now, status, viewerTz }: { now: number; status: TripStatus; 
           <h2 className="mt-1 text-2xl font-semibold tracking-tight text-stone-900 dark:text-stone-50 sm:text-3xl">{headline}</h2>
           {stop && (
             <p className="mt-1 text-stone-600 dark:text-stone-400">
-              {stop.country}
+              {FLAGS[stop.country] ?? ""} {stop.country}
               {stop.lodging ? (
                 <>
                   {" · "}
@@ -310,7 +310,7 @@ function NowPanel({ now, status, viewerTz }: { now: number; status: TripStatus; 
               ) : (
                 <p className="mt-2 text-sm text-stone-500">Nothing written down for today. Probably a free day in {stop?.place}.</p>
               )}
-              <PlaceTiles titles={plan.flatMap(itemPlaces)} className="mt-3" />
+              <PlaceTiles titles={plan.flatMap(itemPlaces)} hotel={stop ?? undefined} className="mt-3" />
             </div>
           )}
 

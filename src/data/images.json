@@ -272,12 +272,6 @@
     "description": "Buddhist monastery in Thimphu, Bhutan",
     "extract": "The Tango Monastery is a Buddhist monastery located 14 kilometres (8.7 mi) to the north of the capital city of Thimphu in Bhutan, near Cheri Mountain. It was founded by Phajo Drugom Zhigpo in the 13th century and built in its present form by Tenzin Rabgye, the 4th Temporal Ruler in 1688. In 1616, the Tibetan lama Shabdrung Ngawang Namgyal meditated in its cave. The self-emanated form of the wrathful Hayagriva is deified in the monastery. It belongs to the Drukpa Kagyu School\nof Buddhism in Bhutan."
   },
-  "Buddha Dordenma": {
-    "src": null,
-    "page": "https://en.wikipedia.org/wiki/Buddha%20Dordenma",
-    "description": "",
-    "extract": ""
-  },
   "Motithang Takin Preserve": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Takin%2C_Thimphu_mini-zoo.jpg/1280px-Takin%2C_Thimphu_mini-zoo.jpg",
     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Takin%2C_Thimphu_mini-zoo.jpg/330px-Takin%2C_Thimphu_mini-zoo.jpg",
@@ -501,5 +495,89 @@
     "page": "https://en.wikipedia.org/wiki/Omarama_Clay_Cliffs",
     "description": "Tourist attraction in New Zealand",
     "extract": "The Omarama Clay Cliffs, also known as the Ahuriri River Clay Cliffs and the Clay Cliffs Paritea are a group of cliffs in southern New Zealand. They are located close to the north bank of the Ahuriri River, some 10 km to the west of the township of Omarama."
+  },
+  "Bến Thành Market": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Ben_Thanh%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG/1280px-Ben_Thanh%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Ben_Thanh%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG/330px-Ben_Thanh%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG",
+    "page": "https://en.wikipedia.org/wiki/B%E1%BA%BFn_Th%C3%A0nh_Market",
+    "description": "Market in Ho Chi Minh City, Vietnam",
+    "extract": "Bến Thành Market is located in the center of Ho Chi Minh City (Saigon), Vietnam in District 1. The market is one of the earliest surviving structures in the city and an important symbol of the city. Ben Thanh Market is a famous destination for many local and foreign tourists from all around the world. The market operates all year round and opens at around 6am every day until the official closing time at 6pm. After 6pm, the day market transitions into a night market which runs until 10pm."
+  },
+  "Landmark 81": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Ho_Chi_Minh_City_panorama_2019_%28cropped%29.jpg/1280px-Ho_Chi_Minh_City_panorama_2019_%28cropped%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Ho_Chi_Minh_City_panorama_2019_%28cropped%29.jpg/330px-Ho_Chi_Minh_City_panorama_2019_%28cropped%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Landmark_81",
+    "description": "Supertall skyscraper in Ho Chi Minh City, Vietnam",
+    "extract": "Landmark 81 is a supertall skyscraper in Ho Chi Minh City, Vietnam. It is primarily invested in and developed by Vinhomes, the largest Vietnamese real-estate developer. Landmark 81 holds the position of the tallest building in Vietnam, the second-tallest building in Southeast Asia, as well as the seventeenth-tallest building in the world overall."
+  },
+  "Saigon Central Post Office": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Saigon_Central_Post_Office_%2852681461470%29.jpg/1280px-Saigon_Central_Post_Office_%2852681461470%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Saigon_Central_Post_Office_%2852681461470%29.jpg/330px-Saigon_Central_Post_Office_%2852681461470%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Saigon_Central_Post_Office",
+    "description": "Post office in Ho Chi Minh City, Vietnam",
+    "extract": "The Saigon Central Post Office is a post office in Paris Commune Square, Saigon ward, Ho Chi Minh City, next to the Saigon Notre-Dame Basilica, the city's cathedral."
+  },
+  "Jade Emperor Pagoda": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Jade_Emperor_Pagoda_Saigon.jpg/1280px-Jade_Emperor_Pagoda_Saigon.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Jade_Emperor_Pagoda_Saigon.jpg/330px-Jade_Emperor_Pagoda_Saigon.jpg",
+    "page": "https://en.wikipedia.org/wiki/Jade_Emperor_Pagoda",
+    "description": "Taoist pagoda in Ho Chi Minh City, Vietnam",
+    "extract": "The Jade Emperor Pagoda also known as the Phước Hải Tự is a Taoist, Buddhist, Confucian pagoda located at District 1, Ho Chi Minh City, Vietnam. It was founded by a Chinese merchant named Liu Daoyuan, a Cantonese migrant. It is also known from 1984 by the new Buddhist name Phước Hải Tự. Then U.S. President Barack Obama paid a visit to the pagoda during his state trip to Vietnam on 22 May 2016."
+  },
+  "Independence Palace": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/20190923_Independence_Palace-10.jpg/1280px-20190923_Independence_Palace-10.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/20190923_Independence_Palace-10.jpg/330px-20190923_Independence_Palace-10.jpg",
+    "page": "https://en.wikipedia.org/wiki/Independence_Palace",
+    "description": "Presidential Palace, Convention center (present) in Ho Chi Minh City, Vietnam",
+    "extract": "The Independence Palace, also publicly and officially known as the Reunification Convention Hall or simply Reunification Hall, is a historic landmark and government-owned public hall in Ho Chi Minh City, Vietnam. It was designed by architect Ngô Viết Thụ and was the presidential palace, home and workplace of the president of the Republic of Vietnam. It was also the site of the Fall of Saigon on 30 April 1975 that ended the Vietnam War, when a Liberation Army of South Vietnam tank crashed through its gates."
+  },
+  "Đồng Xuân Market": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Dong_Xuan_market.jpg/1280px-Dong_Xuan_market.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Dong_Xuan_market.jpg/330px-Dong_Xuan_market.jpg",
+    "page": "https://en.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Xu%C3%A2n_Market",
+    "description": "Market in Hanoi, Vietnam",
+    "extract": "Đồng Xuân Market is a market in the center district Hoàn Kiếm of Hanoi, Vietnam. Originally built by the French administration in 1889, Đồng Xuân Market has been renovated several times with the latest being in 1994 after a fire that almost destroyed the market. Nowadays, Đồng Xuân Market is the largest covered market of Hanoi where the wholesale traders sell everything from clothes and household goods to foodstuffs."
+  },
+  "Hanoi Train Street": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Hanoi_Train_Street_%2820231225b%29_%2853489076293%29.jpg/1280px-Hanoi_Train_Street_%2820231225b%29_%2853489076293%29.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Hanoi_Train_Street_%2820231225b%29_%2853489076293%29.jpg/330px-Hanoi_Train_Street_%2820231225b%29_%2853489076293%29.jpg",
+    "page": "https://en.wikipedia.org/wiki/Hanoi_Train_Street",
+    "description": "Street in Hanoi, Vietnam",
+    "extract": "Train Street or Railway Street is a narrow train bypass in Hanoi which several times daily sees a train pass close to buildings on either side of the tracks. It is situated specifically, along Điện Biên Phủ and Phùng Hưng streets,opposite Dropin Cafe and the main Hanoi Railway Station. The track was built by the French in 1902 and is still an active rail line as of 2026."
+  },
+  "St. Joseph's Cathedral, Hanoi": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8d/St._Joseph%27s_Cathedral_-_Hanoi%2C_Vietnam.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/St._Joseph%27s_Cathedral_-_Hanoi%2C_Vietnam.jpg/330px-St._Joseph%27s_Cathedral_-_Hanoi%2C_Vietnam.jpg",
+    "page": "https://en.wikipedia.org/wiki/St._Joseph's_Cathedral%2C_Hanoi",
+    "description": "Church in Vietnam",
+    "extract": "St. Joseph's Cathedral is a Catholic church on Nhà Chung Street, in the Hoàn Kiếm District of Hanoi, Vietnam. It is a late 19th-century Gothic Revival church that serves as the cathedral of the Roman Catholic Archdiocese of Hanoi. The cathedral is named after Joseph, the patron saint of Vietnam."
+  },
+  "Memorial Chorten, Thimphu": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/National_Memorial_Chorten%2C_Thimphu_01.jpg/1280px-National_Memorial_Chorten%2C_Thimphu_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/National_Memorial_Chorten%2C_Thimphu_01.jpg/330px-National_Memorial_Chorten%2C_Thimphu_01.jpg",
+    "page": "https://en.wikipedia.org/wiki/Memorial_Chorten%2C_Thimphu",
+    "description": "Memorial Stupa in Thimphu, Bhutan",
+    "extract": "The Memorial Chorten is a stupa in Thimphu, Bhutan, located near Desuung Headquarters and above Royal Bhutan Police Headquarters. The stupa, built in 1974 to honor the third Druk Gyalpo, Jigme Dorji Wangchuck (1928–1972), is 108 feet tall and a prominent landmark in the city with its golden spires and bells. In 2008, it underwent extensive renovation. It is popularly known as \"the most visible religious landmark in Bhutan\". It was consecrated by Dudjom Jigdral Yeshe Dorje."
+  },
+  "Chendebji Chorten": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Chendebji_Chorten.jpg/1280px-Chendebji_Chorten.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Chendebji_Chorten.jpg/330px-Chendebji_Chorten.jpg",
+    "page": "https://en.wikipedia.org/wiki/Chendebji_Chorten",
+    "description": "Stupa in Trongsa, Bhutan",
+    "extract": "Chendebji Chorten is a stupa in Bhutan, located 41 kilometres (25 mi) west of Trongsa at 2,430 metres (7,970 ft) in elevation."
+  },
+  "Jakar Dzong": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a7/JakarDzong.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/JakarDzong.jpg/330px-JakarDzong.jpg",
+    "page": "https://en.wikipedia.org/wiki/Jakar_Dzong",
+    "description": "Fortress in Bumthang, Bhutan",
+    "extract": "Jakar Dzong or Jakar Yugyal Dzong is the dzong or fortress of the Bumthang District in central Bhutan. It is located on a ridge above Jakar town in the Chamkhar valley of Bumthang. It is built on the site of an earlier temple established by the Ralung hierarch Yongzin Ngagi Wangchuk (1517–1554) when he came to Bhutan. Jakar Dzong may be the largest dzong in Bhutan, with a circumference of more than 1,500 metres (4,900 ft)."
+  },
+  "Hokitika": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/92/Hokitika_Township.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Hokitika_Township.jpg/330px-Hokitika_Township.jpg",
+    "page": "https://en.wikipedia.org/wiki/Hokitika",
+    "description": "Town in West Coast, New Zealand",
+    "extract": "Hokitika is a town in the West Coast region of New Zealand's South Island, 40 kilometres (25 mi) south of Greymouth, and close to the mouth of the Hokitika River. It is the seat and largest town in the Westland District. The town's estimated population is 3,420 as of June 2025."
   }
 }
