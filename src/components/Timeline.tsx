@@ -89,7 +89,7 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
           </div>
 
           {stop.plans.length > 0 && (
-            <details className="group mt-3" open={state === "current" || state === "next"}>
+            <details className="group mt-3" open>
               <summary className="cursor-pointer select-none text-sm font-semibold text-stone-800 dark:text-stone-200">
                 Day by day{" "}
                 <span className="font-normal text-stone-500">
@@ -123,7 +123,7 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
           )}
 
           {stop.ideas?.length ? (
-            <details className="mt-2" open={state === "current" || state === "next"}>
+            <details className="mt-2" open>
               <summary className="cursor-pointer select-none text-sm font-semibold text-stone-800 dark:text-stone-200">
                 Could do <span className="font-normal text-stone-500">({stop.ideas.length} ideas)</span>
               </summary>
