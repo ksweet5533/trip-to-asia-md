@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { TRAVELERS, isBooked, itemPlaces, itemText } from "@/data/itinerary";
 import { PlaceTiles } from "@/components/PlaceTiles";
 import { flightTrackerUrl, flightradarUrl } from "@/data/flights";
-import { describeOffset, fmtDate, fmtDateString, fmtTime, tzAbbrev } from "@/lib/time";
+import { daysBetween, describeOffset, fmtDate, fmtDateString, fmtTime, partsInTz, tzAbbrev } from "@/lib/time";
 import { getStatus, mapsUrl, planFor, progressAt, stopsWithTimes, TOTAL_DAYS, tripDayNumber, type StopWithTimes, type TripStatus } from "@/lib/trip";
 import { Timeline } from "@/components/Timeline";
 import { Photo } from "@/components/Photo";
@@ -80,6 +80,20 @@ export default function TripTracker() {
 
   const status = useMemo(() => (now === null ? null : getStatus(now)), [now]);
   const progress = useMemo(() => (now === null ? null : progressAt(now)), [now]);
+  const [focus, setFocus] = useState<number | null>(null);
+  const currentIndex = progress ? Math.max(0, progress.visited.length - 1) : 0;
+
+  // Left and right arrow keys step through the stops on the map.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement | null)?.tagName;
+      if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA") return;
+      if (e.key === "ArrowRight") setFocus((f) => Math.min(stopsWithTimes.length - 1, (f ?? currentIndex) + 1));
+      if (e.key === "ArrowLeft") setFocus((f) => Math.max(0, (f ?? currentIndex) - 1));
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [currentIndex]);
 
   const zoneOptions = useMemo(() => {
     const d = deviceTz();
@@ -126,8 +140,9 @@ export default function TripTracker() {
           <section className="mt-8">
             <SectionTitle kicker="The trip so far" title="Map" />
             <div className="overflow-hidden rounded-2xl border border-stone-200 shadow-sm dark:border-stone-800">
-              <TripMap stops={stopsWithTimes} visitedCount={progress.visited.length} status={status} />
+              <TripMap stops={stopsWithTimes} visitedCount={progress.visited.length} status={status} focusIndex={focus} onFocus={setFocus} />
             </div>
+            <MapNav focus={focus} setFocus={setFocus} currentIndex={currentIndex} now={now} />
             <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
               <Stat label="Day" value={status.kind === "before" ? "0" : `${Math.min(TOTAL_DAYS, Math.max(1, tripDayNumber(status.kind === "flying" ? status.today : status.today)))} of ${TOTAL_DAYS}`} />
               <Stat label="Stops reached" value={`${Math.max(0, progress.visited.length - 1)} of ${stopsWithTimes.length - 1}`} />
@@ -146,6 +161,46 @@ export default function TripTracker() {
           </footer>
         </>
       )}
+    </div>
+  );
+}
+
+function MapNav({ focus, setFocus, currentIndex, now }: { focus: number | null; setFocus: (i: number | null) => void; currentIndex: number; now: number }) {
+  const index = focus ?? currentIndex;
+  const stop = stopsWithTimes[index];
+  const last = stopsWithTimes.length - 1;
+  const delta = daysBetween(partsInTz(now, stop.tz).date, stop.arrive);
+  const relation =
+    index === currentIndex ? "they are here now" : delta > 0 ? `in ${delta} day${delta === 1 ? "" : "s"}` : `${-delta} day${delta === -1 ? "" : "s"} ago`;
+  const btn = "rounded-full bg-white px-3 py-1.5 text-sm font-medium text-stone-800 ring-1 ring-stone-300 hover:bg-stone-100 disabled:opacity-40 disabled:hover:bg-white dark:bg-stone-900 dark:text-stone-100 dark:ring-stone-700 dark:hover:bg-stone-800";
+  return (
+    <div className="mt-3 flex items-center gap-2">
+      <button type="button" className={btn} onClick={() => setFocus(Math.max(0, index - 1))} disabled={index === 0} aria-label="Previous stop">
+        ◀ <span className="hidden sm:inline">Previous</span>
+      </button>
+      <div className="min-w-0 flex-1 text-center">
+        <p className="truncate text-sm font-semibold text-stone-900 dark:text-stone-50">
+          {index + 1}. {stop.place}
+          {focus === null ? "" : ""}
+        </p>
+        <p className="truncate text-xs text-stone-500">
+          {fmtDateString(stop.arrive)} · {relation}
+          {focus !== null ? (
+            <>
+              {" · "}
+              <a href={`#stop-${stop.id}`} className="text-amber-700 underline underline-offset-2 dark:text-amber-400">
+                details ↓
+              </a>
+            </>
+          ) : null}
+        </p>
+      </div>
+      <button type="button" className={btn} onClick={() => setFocus(Math.min(last, index + 1))} disabled={index === last} aria-label="Next stop">
+        <span className="hidden sm:inline">Next</span> ▶
+      </button>
+      <button type="button" className={btn} onClick={() => setFocus(null)} disabled={focus === null} title="Zoom out to the whole route">
+        Overview
+      </button>
     </div>
   );
 }
@@ -264,9 +319,9 @@ function NowPanel({ now, status, viewerTz }: { now: number; status: TripStatus; 
               <h3 className="text-sm font-semibold text-stone-900 dark:text-stone-100">Could do in {stop.place}</h3>
               <ul className="mt-2 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
                 {stop.ideas.slice(0, 6).map((b) => (
-                  <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
+                  <li key={itemText(b)} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
                     <span className="mt-0.5 text-stone-400">○</span>
-                    <span>{b}</span>
+                    <span>{itemText(b)}</span>
                   </li>
                 ))}
                 {stop.ideas.length > 6 && (

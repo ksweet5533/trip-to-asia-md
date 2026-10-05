@@ -129,12 +129,13 @@ function StopCard({ stop, now, viewerTz, viewerLabel, state }: { stop: StopWithT
               </summary>
               <ul className="mt-2 grid gap-x-6 gap-y-1 sm:grid-cols-2">
                 {stop.ideas.map((b) => (
-                  <li key={b} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
+                  <li key={itemText(b)} className="flex gap-2 text-sm text-stone-600 dark:text-stone-400">
                     <span className="text-stone-400">○</span>
-                    <span>{b}</span>
+                    <span>{itemText(b)}</span>
                   </li>
                 ))}
               </ul>
+              <PlaceTiles titles={stop.ideas.flatMap(itemPlaces)} className="mt-3" />
             </details>
           ) : null}
         </div>

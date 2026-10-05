@@ -18,7 +18,7 @@ export type Stop = {
   wiki: string; // English Wikipedia title used for the photo and link
   photoWiki?: string; // use a different page's photo (e.g. a nearby place)
   blurb: string;
-  ideas?: string[]; // "could do" list from the doc
+  ideas?: PlanItem[]; // "could do" list from the doc; items may carry places too
 };
 
 export type PlanItem = string | { text: string; booked?: true; places?: string[] };
@@ -85,10 +85,10 @@ export const stops: Stop[] = [
       "Jade Emperor Pagoda",
       "Palace of Independence",
       "The café apartments on Nguyen Hue",
-      "Tamarind hidden cocktail bar, 33 Nguyen Trung Truc",
-      "Xôi Gà Number One sticky rice, 3 min from the hotel",
-      "Bánh mì: Phuc Hai Quan (crispy pork belly), Huynh Hoa (huge), Bánh Mì Xanh (veggie)",
-      "Hoa Tuc (Michelin, 14 min walk)",
+      p("Tamarind hidden cocktail bar, 33 Nguyen Trung Truc", "@tamarind"),
+      p("Xôi Gà Number One sticky rice, 3 min from the hotel", "@xoiga"),
+      p("Bánh mì: Phuc Hai Quan (crispy pork belly), Huynh Hoa (huge), Bánh Mì Xanh (veggie)", "@huynhhoa"),
+      p("Hoa Tuc (Michelin, 14 min walk)", "@hoatuc"),
     ],
   },
   {
@@ -106,7 +106,7 @@ export const stops: Stop[] = [
     blurb: "The Old Quarter and Hoan Kiem Lake, with a Michelin-starred dinner at Tầm Vị.",
     ideas: [
       "Scooter or Vespa food tour (Hanoi Backstreet Tours, Beyond Vietnam)",
-      "Egg coffee crawl: Cafe Dinh, Cafe Pho Co, The Note, Cafe Giang",
+      p("Egg coffee crawl: Cafe Dinh, Cafe Pho Co, The Note, Cafe Giang", "@cafegiang"),
       "Shrimp fritters by Dong Xuan Market",
       "Hoan Kiem Lake, Temple of Literature, Train Street, St. Joseph's Cathedral",
       "Tran Quoc Pagoda on West Lake",
@@ -182,7 +182,7 @@ export const stops: Stop[] = [
     lodging: "Splendid Secret Hotel",
     wiki: "Hanoi",
     blurb: "Back in Hanoi for two nights before Thailand.",
-    ideas: ["Dinner at Hanoi Oi"],
+    ideas: [p("Dinner at Hanoi Oi", "@hanoioi")],
   },
   {
     id: "bangkok-1",
@@ -475,7 +475,7 @@ export const stops: Stop[] = [
       "Franz Josef Glacier walk, 30 min (2¼ h drive)",
       "West Coast Wildlife Centre to see kiwis",
       "Heli-hike",
-      "Eat: Snakebite Brewery, Monsoon, Blue Ice",
+      p("Eat: Snakebite Brewery, Monsoon, Blue Ice", "@snakebite"),
     ],
   },
   {
@@ -506,7 +506,7 @@ export const stops: Stop[] = [
     lodgingQuery: "Apartments on Helwick Wanaka",
     wiki: "Wānaka",
     blurb: "Three nights on the lake: wine, a glacier walk and a boat to Mou Waho island.",
-    ideas: ["Blue Pools on the drive in (3.5 h from Fox)", "Ground Up Brewery", "Wine tour", "Mou Waho island water taxi"],
+    ideas: ["Blue Pools on the drive in (3.5 h from Fox)", p("Ground Up Brewery", "@groundup"), "Wine tour", "Mou Waho island water taxi"],
   },
   {
     id: "queenstown",
@@ -584,7 +584,7 @@ export const days: DayPlan[] = [
   { date: "2026-10-06", items: ["Arrive Ho Chi Minh City 4:30 AM", "Grand Hotel Du Lac Boutique Saigon"] },
   { date: "2026-10-07", items: ["Ho Chi Minh City"] },
   { date: "2026-10-08", items: [b("Fly to Hanoi 10:00 AM to 12:10 PM, Vietnam Airlines VN210 from Tan Son Nhat"), "May de Ville Lakeside"] },
-  { date: "2026-10-09", items: [p("Hanoi", "Hoàn Kiếm Lake", "Old Quarter, Hanoi"), b("Dinner at Tầm Vị, 6 PM (Michelin star)")] },
+  { date: "2026-10-09", items: [p("Hanoi", "Hoàn Kiếm Lake", "Old Quarter, Hanoi"), b("Dinner at Tầm Vị, 6 PM (Michelin star)", "@tamvi")] },
   { date: "2026-10-10", items: [b("Peony Cruise picks up at the hotel 8 to 8:30 AM"), "Board in Lan Ha Bay"] },
   { date: "2026-10-11", items: [p("On the cruise in Lan Ha Bay", "Hạ Long Bay", "Cát Bà Island")] },
   { date: "2026-10-12", items: ["Cruise ends 11:30 AM", b("Driver at noon to Ninh Binh, about 4 h, arrive around 4 PM"), "Tam Coc Garden Resort"] },
@@ -595,7 +595,7 @@ export const days: DayPlan[] = [
   { date: "2026-10-17", items: ["1:15 PM bus to Hanoi", "Splendid Secret Hotel"] },
   { date: "2026-10-18", items: [p("Hanoi", "Temple of Literature, Hanoi", "Trấn Quốc Pagoda"), "Dinner out"] },
   { date: "2026-10-19", items: [b("Fly to Bangkok 8:50 to 10:50 AM, Vietnam Airlines VN611"), "Salil Hotel Riverside"] },
-  { date: "2026-10-20", items: [p("Bangkok", "Wat Arun", "Chao Phraya River"), b("Tuk-tuk food tour, 4:30 PM pickup at the hotel")] },
+  { date: "2026-10-20", items: [p("Bangkok", "Wat Arun", "Chao Phraya River"), b("Tuk-tuk food tour, 4:30 PM pickup at the hotel", "@tuktuk")] },
   { date: "2026-10-21", items: [b("Fly to Paro, Bhutan 1:10 to 3:25 PM, Druk Air KB151 (3¼ h)", "Paro Airport"), "Drive about 1.5 h to Thimphu", "Hotel Changangkha"] },
   {
     date: "2026-10-22",
@@ -692,7 +692,7 @@ export const days: DayPlan[] = [
   { date: "2026-11-27", items: ["Drive to Queenstown, 1 h", b("Shotover Jet 3:30 PM, check in by 3:00", "Shotover River"), "Stay Wynter Apartments"] },
   { date: "2026-11-28", items: [b("Milford Sound day tour with Luxe Tours, 7:15 AM pickup, plane fly-back", "Milford Sound")] },
   { date: "2026-11-29", items: [p("Queenstown", "Lake Wakatipu")] },
-  { date: "2026-11-30", items: ["Queenstown", b("Dinner at The Nest, 6 PM")] },
+  { date: "2026-11-30", items: ["Queenstown", b("Dinner at The Nest, 6 PM", "@nest")] },
   { date: "2026-12-01", items: [p("Drive 2½ h to Twizel via Lindis Pass", "Lindis Pass"), p("Clay Cliffs on the way", "Omarama Clay Cliffs"), "Stay Alps Motel"] },
   { date: "2026-12-02", items: [p("Aoraki / Mt Cook", "Aoraki / Mount Cook"), p("Hooker Valley Track", "Hooker Valley Track", "Lake Pukaki")] },
   { date: "2026-12-03", items: ["Drive 3½ h to Christchurch", b("Return the car by 3:30 PM"), "Stay Novotel Christchurch Airport"] },

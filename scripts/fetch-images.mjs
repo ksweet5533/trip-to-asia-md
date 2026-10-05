@@ -6,7 +6,7 @@ const src = readFileSync(new URL("../src/data/itinerary.ts", import.meta.url), "
 const titles = new Set([...src.matchAll(/(?:wiki|photoWiki):\s*"([^"]+)"/g)].map((m) => m[1]));
 // Places tagged on day items: b("text", "Place", ...) or p("text", "Place", ...)
 for (const m of src.matchAll(/\b[bp]\("(?:[^"\\]|\\.)*"((?:\s*,\s*"[^"]*")+)\s*\)/g)) {
-  for (const t of m[1].matchAll(/"([^"]+)"/g)) titles.add(t[1]);
+  for (const t of m[1].matchAll(/"([^"]+)"/g)) if (!t[1].startsWith("@")) titles.add(t[1]);
 }
 
 const UA = "trip-to-asia-md site build (personal family site)";
